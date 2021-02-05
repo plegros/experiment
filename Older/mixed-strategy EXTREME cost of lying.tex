@@ -1,0 +1,610 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+\documentclass[12pt]{article} 
+\usepackage{tikz}
+
+%\usepackage{xcolor}
+%\usepackage{hyperref}
+%\usepackage{subfig}
+%\usepackage{xltxtra} 
+\usepackage{enumerate}
+\usepackage{amsmath,amsthm,amssymb,amsfonts} 
+\usepackage{graphicx} 
+\usepackage[center]{caption} 
+\usepackage{enumerate} 
+\usepackage[shortlabels]{enumitem} 
+\usepackage[obeyDraft,colorinlistoftodos]{todonotes} 
+\usepackage[onehalfspacing]{setspace}
+
+\usepackage{array}
+
+%\usepackage{fontspec}
+%\usepackage{xunicode}
+%\usepackage{xltxtra} \synctex=1 
+\usepackage{natbib} 
+\usepackage{subcaption} 
+\usepackage[onehalfspacing]{setspace}
+
+%\usepackage[round]{natbib}
+%\usepackage[all]{xy}
+%\setcounter{MaxMatrixCols}{10}
+%
+\renewcommand{\l}{\ell}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}{Acknowledgement}
+\newtheorem{algorithm}{Algorithm}
+\newtheorem{assumption}{Assumption}
+\newtheorem{axiom}{Axiom}
+\newtheorem{case}{Case}
+\newtheorem{claim}{Claim}
+\newtheorem{conclusion}{Conclusion}
+\newtheorem{condition}{Condition}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{criterion}{Criterion}
+\newtheorem{example}{Example}
+\newtheorem{exercise}{Exercise}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition} \theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{notation}{Notation}
+\newtheorem{problem}{Problem} \theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem{fact}{Fact}
+\newtheorem{solution}{Solution}
+\newtheorem{summary}{Summary}
+\newtheorem{thm}{Theorem}[subsection]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary} 
+
+
+\begin{document} 
+\title{Signalling With ``Extreme'' Cost of Lying and Mixed Strategies} 
+\author{The Three}
+\date{\today} 
+\maketitle
+
+\tableofcontents
+
+\pagebreak
+\section{Assumptions}
+Players have equiprobable types $C,D$ with payoff structures
+\begin{table}
+	[!htbp] \centering 
+	\begin{tabular}
+		{c c c} {\small{Own$\backslash$} Opponent} & $H$ & $L$ \\
+		\cline{2-3} $H$ & $a$& $10$\\
+		\cline{2-3} $L$ & $24$& $20$ \\
+		\cline{2-3}\\
+		\multicolumn{3}{c}{Type $C$} 
+	\end{tabular}
+	\hspace{5em} 
+	\begin{tabular}
+		{c c c} {\small{Own$\backslash$} Opponent} & $H$ & $L$ \\
+		\cline{2-3} $H$ & $22$& $10$\\
+		\cline{2-3} $L$ & $24$& $20$ \\
+		\cline{2-3}\\
+		\multicolumn{3}{c}{Type $D$} 
+	\end{tabular}
+	\caption{Regime NC ($a\in\{30,50\}$)} 
+\label{tbl:NC} 
+\end{table}
+
+There are two types: agents who have no cost of lying (type $o$ for ``opportunists''?) and agents who keep their promise (type $p$ for promise keeper) if they communicate.
+
+Notation
+\begin{itemize}
+	\item $x_k(i,j)$, $k\in\{o,p\}$ is the strategy of $C_k$ in state $(i,j)$. By assumption, $x_p(1,j)=1$.
+	\item $\alpha_k$ is the communication strategy of $C_k$ and $\beta_k$ is the communication strategy of $D_k$.
+	\item The probabilities that types $C$ and $D$ send a message are, respectively,
+	\begin{align*}
+		\alpha^* &=(1-\pi)\alpha_o+\pi\alpha_p\\
+		\beta^* &=(1-\pi)\beta_o+\pi\beta_p
+	\end{align*}
+	\item Let $x^*(i,j)$ the probability that a player of type $C$ plays $H$ in state $(i,j)$. Hence,
+	\[
+x^*(1,j)=\frac{(1-\pi)\alpha_o x_o(1,j)+\pi\alpha_p}{\alpha^*}
+\]
+and 
+\[
+x^*(0,j)=\frac{(1-\pi)(1-\alpha_o) x_o(0,j)+\pi(1-\alpha_p)x_p(0,j)}{1-\alpha^*}
+\]
+SInce $C_o,C_p$ have the same strategy space and same payoffs, we will assume without loss of generality that $x_o(0,j)=x_p(0,j)$.
+
+\end{itemize}
+
+\pagebreak
+\section{Summary of Results}
+We summarize our findings (proven in the Appendix) of our findings.
+
+\begin{table}[h!]
+	\begin{subtable}[]{0.45\linewidth}
+	\begin{tabular}{c c c}
+				& Theory 	& Exp \\
+				\hline
+				$\alpha^*$ 	& 0.4	& 0.49\\
+				$\beta^*$ 	& 0 & 0.04\\ 
+				\hline
+				$x^*(1,1)$ 	& 1	& 0.99 - 1\\ 
+				$x^*(0,1)$ & 1 & 0.87 - 0.88\\ 
+				$x^*(1,0)$ & 1 & 0.74 - 0.75\\
+				$x^*(0,0)$ & 0.74 &  0.31 - 0.46\\ 
+				\hline
+		\end{tabular}
+		\caption*{F50}	
+	\end{subtable}	
+	\hfill
+	\begin{subtable}{0.45\linewidth}
+	\begin{tabular}{c c c}
+		& Theory 	& Exp \\
+		\hline
+		$\alpha^*$ 	& 1	& 0.82\\
+		$\beta^*$ 	& $1-\pi$ & 0.43\\ 
+		\hline
+		$x^*(1,1)$ 	& 1	& 0.96\\ 
+		$x^*(0,1)$ & 1 & 0.62 - 0.76\\ 
+		$x^*(1,0)$ & $\pi$ & 0.34 - 0.45\\
+		$x^*(0,0)$ & 0 &  0.17 - 0.32\\
+			\hline
+\end{tabular}
+\caption*{C50 ($\pi>\frac{10}{23}$)\\{\tiny state $(0,1)$ is an out-of-equilibrium state}}
+\end{subtable}
+\end{table}
+
+\begin{table}[h!]
+	\begin{subtable}[]{0.45\linewidth}
+		{\renewcommand{\arraystretch}{1.2}%
+		\begin{tabular}{c c c}
+			& Theory 	& Exp \\
+			\hline 
+			$\alpha^*$ 	& $\frac{8}{3}(1-\pi)$	& 0.3\\
+			$\beta^*$ 	& 0 & 0.03\\ 
+			\hline
+			$x^*(1,1)$ 	& 1	& 0.86 - 0.88\\ 
+			$x^*(0,1)$ & $\frac{31-70\pi}{10(5-8\pi)}$ & 0.77 - 0.68\\ 
+			$x^*(1,0)$ & $\frac{5}{8}$ & 0.66 - 0.61\\
+			$x^*(0,0)$ & 0 &  0.08 - 0.16\\
+				\hline
+		\end{tabular}
+		\caption*{F30 ($\pi\leq \frac{31}{70}$)}}
+	\end{subtable}
+	\hfill
+	\begin{subtable}[]{0.45\linewidth}
+		{\renewcommand{\arraystretch}{1.2}%
+			\begin{tabular}{c c c}
+					& Theory 	& Exp \\
+					\hline
+					$\alpha^*$ 	& 1	& 0.75\\
+					$\beta^*$ 	& $1-\pi$ & 0.53\\ 
+					\hline
+					$x^*(1,1)$ 	& 1	& 0.68 - 0.48\\
+					$x^*(0,1)$ & 1 & 0.42 - 0.15\\ 
+					$x^*(1,0)$ & $\pi$ & 0.26 - 0.13\\
+					$x^*(0,0)$ & 0 &  0.12 - 0.1\\
+						\hline
+			\end{tabular}}
+				\caption*{C30\\{\tiny state $(0,1)$ is an out-of-equilibrium state}} 
+	\end{subtable}
+	\end{table}
+
+
+
+\begin{remark}
+	For C30, if $\pi\in[2/5,10/13]$, there is another equilibrium that is considered in the Appendix, but the equilibrium values do not fit as well.
+	
+	The case F30 is the worst performing: impossible to have $\alpha^*$ and $x^*(0,1)$ to be both in the `ballpark' experimental values. The problem is that in order to play $H$ in state $(0,1)$, $C$ must believe that the opponent cooperates sometimes. We can show that $x_o(1,0)=0$; hence it must be that a communicating opponent is sometimes of type $C_p$. This implies however than $\alpha_o=1$: indeed because $x_o(1,0)=0$, $C_p$ who is `forced' to play $H$ after communicating must have a strictly lower payoff from communication than $C_o$. However because both $C_o,C_p$ have the same payoff if they do not communicate, it follows that $\alpha_p>0 \Rightarrow \alpha_o=1$, but then a lower bound on $\alpha^*$ is $(1-\pi)$, and in order to have $\alpha^*=0.3$, $\pi$ must be (unrealistically) large.
+\end{remark}
+
+\begin{remark}
+	\begin{itemize}
+		\item In the final paper, may want to introduce the idea of ``monotonic'' strategies, in the sense that independently of her communication strategy, a player is more likely to cooperate (play $H$) if the other player communicated, that is $x_o(1,1)\geq x_o(1,0)$ and $x(0,1)>x(0,0)$. Note that this allows situations like $x_o(1,0)<x(0,1)$.
+
+		A consequence of having monotonic strategies is that in C50 and C30, types $C_o,C_p,D_o$ communicate with probability one. Turns out that in the experiments, strategies seem to be monotonic.
+		\item We ignore equilibrium with $x_o(1,1)=0$: they do not seem consistent with experimental data. Also, we always have equilibria that replicate the no-communication equilibria, that we also ignore.
+	\end{itemize}
+\end{remark}
+
+\pagebreak
+
+\appendix
+\begin{center}
+	\Huge{Appendix}
+\end{center} 
+
+\section{High Value of Cooperation $a=50$}
+\subsection{F50}
+In the case of F30 and F50, $\beta_o=\beta_p=0$: indeeed, by communicating, a $D_o$ player can get at most a benefit of $2$ while the cost of communication is $3$.\footnote{%
+The strategy of player $D_k$ depends on whether she communicates but not on the communication of her opponent, hence $y_k(i,1)=y_k(i,0)$ for all $k=1,\infty$ and $i=0,1$. Hence, communicating or not yields the same payoff for a type $D$ when facing another type $D$. The most $D$ can get against a type $C$ playing $H$ is equal to $4$, hence $2$ in expectation.
+}
+%
+\subsubsection*{Incentives to play $H$}
+\paragraph{State $(1,1)$,} the incentive condition for $C_o$ to play $x(1,1)>0$ is:
+\begin{align*}
+	(1-\pi) &(10+40x_o(1,1))+\pi 50\\
+		&\geq (1-\pi) (20+4x_o(1,1))+\pi 24
+\end{align*}
+or
+\[
+x_o(1,1)\geq \frac{5-18\pi}{18(1-\pi)}
+\]
+which can  be satisfied for any value of $\pi$. In particular, for any value of $\pi$, it is possible to have $x_o(1,1)=1$. For $\pi\leq \frac{5}{18}$ there is also the mixed strategy $x_o(1,1)=\frac{5-18\pi}{18(1-\pi)}$.
+
+\paragraph{State $(1,0)$,} because the probablity than an opponent does not communicate is equal to $\frac{2-\alpha}{2}$, $x_o(1,0)\in(0,1]$ is a best response when
+\begin{align*}
+	(1-\pi)&\frac{1-\alpha}{2-\alpha} (10+40x_o(0,1))+\pi \frac{1-\alpha}{2-\alpha}(10+40 x_p(0,1))+\frac{1}{2-\alpha}10\\
+		&\geq (1-\pi)\frac{1-\alpha}{2-\alpha} (20+4x_o(0,1))+\pi \frac{1-\alpha}{2-\alpha}(20+4 x_p(0,1)) +\frac{1}{2-\alpha}20
+\end{align*}
+Note that this is the same condition for type $C_p$ and that the condition depends on the average value $(1-\pi)x_o(0,1)+\pi x_p(0,1)$. Hence, there is no loss of generality in assuming that $x_o(0,1)=x_p(0,1)$.\footnote{%
+This does not affect the incentives of types $D$ to communicate either.} Hence, for the common value $x(0,1)$, we need
+\[
+x(0,1)\geq\frac{5(2-\alpha)}{18(1-\alpha)}
+\]
+which is possible if $\alpha\leq \frac{8}{13}.$
+
+\paragraph{State $(0,1)$,} playing $x(0,1)>0$ is a best response when
+
+\begin{align*}
+	(1-\pi) &(10+40x_o(1,0))+\pi 50\\
+		&\geq(1-\pi) (20+4x_o(1,0))+\pi  24
+\end{align*}
+or
+\[
+x_o(1,0)\geq\frac{5-18\pi}{18(1-\pi)}.
+\]
+The right hand side is clearly less than one, is decreasing in $\pi$ and positive for $\pi\leq\frac{5}{18}$. If $\pi>\frac{5}{18}$, then necessarily $x(0,1)=1$.
+
+\paragraph{State $(0,0)$,} playing $H$ is a best response when\footnote{%
+The condition is similar to the condiiton on $x(0,1)$ in the state $(1,0$),  this would not be the case if type $C_o$ has a small cost of lying for then playing $L$ in state $(1,0$ generates an expected payoff that is lower -- for a given probability of playing $H$ by types $C$ who do not communicate.}
+\begin{align*}
+	(1-\pi)&\frac{1-\alpha}{2-\alpha} (10+40x_o(0,0))+\pi \frac{1-\alpha}{2-\alpha}(10+40 x_p(0,0))+\frac{1}{2-\alpha}10\\
+		&\geq  (1-\pi)\frac{1-\alpha}{2-\alpha} (20+4x_o(0,0))+\pi \frac{1-\alpha}{2-\alpha}(20+4 x_p(0,0)) +\frac{1}{2-\alpha}20
+\end{align*}
+The condition depends on the average probability $x(0,0):=(1-\pi)x_o(0,0)+\pi x_p(0,0)$, and requires that
+\[
+x(0,0)\geq \frac{5(2-\alpha)}{18(1-\alpha)}.
+\]
+which is possible if $\alpha\leq \frac{8}{13}$
+
+To summarize the best responses and -- if relevant -- the conditions on $\pi,\alpha$ are the following for having $x_k(i,j)$ positive:
+
+\begin{itemize}\setlength\itemsep{0em}
+	\item $x_o(1,1)\begin{cases}
+		=1 &\text{ if } \pi >\frac{5}{18}\\
+		\in\left\{1,\frac{5-18\pi}{18(1-\pi)}\right\}&\text{ if } \pi \leq \frac{5}{18}
+	\end{cases}$
+	\item Can always have $x_o(1,0)=x(0,1)=0$
+	\item For $\pi\leq \frac{5}{18}$, and $\alpha\leq \frac{8}{13}$, we can also have the mixed strategies $x_o(1,0)=\frac{5-18\pi}{18(1-\pi)}$ and $x(0,1)=\frac{5(2-\alpha)}{18(1-\alpha)}$.
+	\item $x(0,0)\begin{cases}
+		=0 &\text{ if } \alpha >\frac{8}{13}\\
+		\in\left\{1,\frac{5(2-\alpha)}{18(1-\alpha)}\right\}&\text{ if } \alpha \leq \frac{8}{13}.
+	\end{cases}$
+\end{itemize}
+
+\subsubsection*{Incentives to communicate}
+We assume that $x(i,j)>0$ for all states $(i,j)$.
+
+We are left verifying the indifference condition for types $C$ in communication ($\alpha\in(0,1)$).
+
+\begin{align*}
+	\alpha&\left[\frac{1-\pi}{2}(10+40 x_o(1,1))+\frac{\pi}{2}50\right]+(1-\alpha)\frac{1}{2}(10+40x(0,1))+\frac{1}{2}10-3\\
+		&=\alpha\left[\frac{1-\pi}{2}(10+40 x_o(1,0))+\frac{\pi}{2}50\right]+(1-\alpha)\frac{1}{2}(10+40x(0,0))+\frac{1}{2}10.
+\end{align*}
+The condition reduces to 
+\begin{equation}\label{IC-comm}
+	\alpha (1-\pi ) (x_o(1,1)-x_o(1,0))+(1-\alpha) (x(0,1)-x(0,0))=\frac{3}{20}.	
+\end{equation}
+%
+If we assume $\alpha\leq \frac{8}{13}$, we can have $x_o(1,1)=x_o(1,0)=x(0,1)=1$ and the incentive condition is 
+\[
+(1-\alpha) (1-x(0,0))=\frac{3}{20}.
+\]
+Clearly, one must have $x(0,0)=\frac{5(2-\alpha)}{18(1-\alpha)}$. Plugging this value in the previous expression, we obtain 
+\[
+\alpha=\frac{53}{130}\approx 0.4.
+\]
+which is consistent with our assumption that $\alpha\leq \frac{8}{13}$. Then, 
+\[
+x(0,0)=\frac{115}{154}\approx 0.74.
+\]
+%
+The continuation strategies are consistent `qualitatively' with the experimental values: players play $H$ less often in state $(0,0)$ than in the other states, and the probabilities of communication per type are also consistent with the experimental value ($0.4$ instead of $0.49$ for $C$ and $0$ instead of $0.04$ for $D$).
+
+Note that these results are independent of the value of $\pi$. This will not be the case for the regime without an exogenous cost of communication.
+\begin{table}[h!]
+\begin{center}
+	\begin{tabular}{c c c}
+			& Theory 	& Exp \\
+			\hline
+			$\alpha^*$ 	& 0.4	& 0.49\\
+			$\beta^*$ 	& 0 & 0.04\\ 
+			\hline
+			$x^*(1,1)$ 	& 1	& 0.99 - 1\\ 
+			$x^*(0,1)$ & 1 & 0.87 - 0.88\\ 
+			$x^*(1,0)$ & 1 & 0.74 - 0.75\\
+			$x^*(0,0)$ & 0.74 &  0.31 - 0.46\\ 
+			\hline
+	\end{tabular}
+	\end{center}
+	\label{F50}
+	\caption{F50}	
+\end{table}
+
+\subsection{C50}
+There is no exogenous cost. Guided by our previous argument, we assume without loss of generality that $x_o(0,1)=x_p(0,1)$ and that types $C_o,C_p$ communicate with the same probability $\alpha$. 
+
+\begin{remark}
+Compared to the previous version of the model, $C_o$ does not bear a cost-of-lying of $1$. This makes it \emph{less} likely that $C_o$ will play $H$ in states $(1,j)$. On the other side, type $D_o$ (previous type $D_1$) does not have a cost of lying either and therefore has \emph{more incentives to communicate}.	
+\end{remark}
+
+If $D_o$ communicates, he will play $L$ and weakly prefers this to not communicate if $H$ is more likely to be played by a player who communicates. By contrast, because $D_p$ is constrained to play $H$ after communication, she will strictly prefer to not communicate.\footnote{%
+The same logic does not apply to types $C$ because if $x_o(1,0)$ is positive, type $C_p$ also \emph{wants} to play $H$. If however types $D_o$ plays $L$ after communication, type $D_p$ \emph{cannot commit to} play $L$ because of the cost of lying}
+ The probability that type $D_o$ communicates is $\beta_o$. Hence, in the experimental data, 
+\[
+	\beta^*=(1-\pi)\beta_o
+\]
+%
+Rather than going through all the possible cases, we will consider the experimental results to guide our search for an equilibrium.
+
+In the mode $C50$, the experimental results are (the second number corresponds to the last five periods of the experiment)
+\begin{itemize}\setlength\itemsep{0em}
+	\item $\alpha^*=82\%$, $\beta^*=43\%$: this suggests that both types $C_o,C_p$ communicate, but not with probability one, and that (type $D_o$ communicates with probability close to $\frac{0.4}{1-\pi}$.
+	\item  $x(1,1)=97\% - 96\%$.\footnote{Because $x(1,1)=Pr(C_o|1,C)x_o(1,1)+Pr(C_p|1,C)= 1-Pr(C_o|1)(1-x_o(1,1))$, $Pr(C_o|1,C)(1-x_o(1,1))$ is small (smaller than $4\%$). Same logic for the other cases}
+	\item $x(1,0)=45\% - 34\%$.
+	\item $x(0,1)=76\% - 61\%$.
+	\item $x(0,0)=32\% - 17\%$.	
+\end{itemize}
+%
+Hence, the equilibrium mode most likely to fit the data is when only $D_p$ does not communicate. We need to verify the incentive compatibility conditions for $x(i,j)$. We will restrict attention to equilibria with $\alpha^*>\beta^*$, consistent with the experimental findinds.
+
+\subsubsection*{Continuation Strategies for $C$}
+\paragraph{State $(1,1)$.} Playing $H$ is optimal for $C_o$ if
+\[\begin{split}
+	(1-\pi)\alpha_o (10+&40 x_o(1,1))+\pi \alpha_p 50+(1-\pi)\beta_o (10)\\
+		&\geq (1-\pi)\alpha_o (20+4 x_o(1,1))+\pi \alpha_p (24)+(1-\pi)\beta_o (20)
+\end{split}
+\]
+or, using $\pi\alpha_p=\alpha^*-(1-\pi)\alpha_o$, when
+\begin{equation}\label{c50-x11}
+	x_o(1,1)\geq 1-\frac{13\alpha^*-5\beta^*}{18(1-\pi)\alpha_o}.	
+\end{equation}
+%
+\paragraph{State $(1,0)$.} Playing $H$ is a best response for $C_o$ if
+\[\begin{split}
+	(1-\alpha) (10+&40 x(0,1))+((1-\pi)(1-\beta_o)+\pi) 10\\
+	&\geq (1-\alpha) (20+4 x(0,1))+((1-\pi)(1-\beta_o)+\pi) 20
+\end{split}
+\]
+or,
+\[
+x(0,1)\geq \frac{5}{18}\frac{2-\alpha^*-\beta^*}{1-\alpha^*}.
+\]
+The bound is clearly positive and is not greater than one when 
+\begin{equation*}
+	13\alpha^* \leq  5\beta^*+8.
+\end{equation*}
+%
+which is impossible if $\alpha^*>\beta^*$. Hence, $x_o(1,0)=0$, implying that $x^*(1,0)=\frac{\pi \alpha_p}{\alpha^*}$, that is the conditional probability that $C$ is of type $C_p$ conditional on communicating.
+%							
+\paragraph{State $(0,1)$.} Playing $H$ is a best response for $C$ if
+\[\begin{split}
+	(1-\pi)\alpha_o (10+&40 x_o(1,0))+\pi \alpha_p 50+(1-\pi)\beta_o (10)\\
+		&\geq (1-\pi)\alpha_o (20+4 x_o(1,0))+\pi \alpha_p		(24)+(1-\pi)\beta_o (20)
+\end{split}
+\]
+hence, using $x_o(1,0)=0$;  
+\[
+	0\geq 1-\frac{13\alpha^*-5\beta^*}{18(1-\pi)\alpha_o}.
+\]
+which is possible only if 
+\begin{equation}\label{cond-c50-01}
+	\pi\alpha_p\geq \frac{5}{18}(\alpha^*+\beta^*).
+\end{equation}
+
+
+%
+\paragraph{State $(0,0)$.} Playing $H$ is optimal under a similar condition as in state $(1,0)$, that is $x(0,0)>0$ when
+\[
+x(0,0)\geq \frac{5}{18}\frac{2-\alpha^*-\beta^*}{1-\alpha^*}.
+\]
+the right hand side is greater than one when $\alpha^*>\beta^*$, and therefore $x^*(0,0)=0$.
+
+\subsubsection*{Incentives to Communicate}
+$D$ weakly prefers to communicate than not communicating ($\beta_o>0$) when
+\[\begin{split}
+(1-\pi)&[\alpha_o(20+4 x_o(1,1))+(1-\alpha_o)(20+4x(0,1)))]\\ 
+&+\pi [\alpha_p 24+(1-\alpha_p)(20+4x(0,1)]+20\\ 
+	\geq	&(1-\pi)[\alpha_o(20+4 x_o(1,0))+(1-\alpha_o)(20+4x(0,0))]\\ 
+	&+\pi [\alpha_p 24+(1-\alpha_p)(20+4x(0,0)]+20
+\end{split}
+\]
+or,
+\begin{equation}\label{C50-IC-com-D}
+\alpha_o (1-\pi) (x_o(1,1)-x_o(1,0))+(1-\alpha^*)(x(0,1)-x(0,0))\geq 0
+\end{equation}
+%
+This is the same condition as for $C_p$, hence if $\beta_o>0$, we also have $\alpha_p>0$. Type $C_o$ is not constrained in her actions after communicating and because $x_o(1,0)=0$, it must be the case that $\alpha_o=1$ if $\alpha_p$ is positive. 
+
+In keeping with the values in the experiment, $H$ is played more often in state $(1,1)$ than in state $(1,0)$ and also more often in state $(0,1)$ than in state $(0,0)$. Hence the incentive condition \eqref{C50-IC-com-D} is not binding, imply that $\alpha^*=\beta_o=1$.
+
+While type $D_o$ strictly prefers to communicate, it is clear that type $D_\infty$ prefers not to communicate in order to avoid having to commit his (in the static game) dominated strategy. Therefore, $\beta^* = 1-\pi$ and $\alpha^*=1$. It follows that equilibria are in pure strategies.
+
+If $\alpha_p=\alpha^*=1$ and $\beta^*=1-\pi$, \eqref{c50-x11} is $x_o(1,1)\geq \frac{10-23\pi}{18(1-\pi)}$ while \eqref{cond-c50-01} is $0\geq \frac{10-23\pi}{18(1-\pi)}$. Hence a necessary condition to have $x(0,1)$ positive is that $\pi\geq \frac{10}{23}$, in which case we have generically $x(0,1)=x_(1,1)=1$
+
+The table below compares the theoretical values to the experiment values when using the ``closest'' theoretical values. (Note that as $\alpha^*=1$, state $(0,1)$ is an out-of-equilibrium state for type $C$ agents.)
+%
+\begin{table}[h!]
+		\centering
+		\begin{tabular}{c c c}
+		& Theory 	& Exp \\
+		\hline
+		$\alpha^*$ 	& 1	& 0.82\\
+		$\beta^*$ 	& $1-\pi$ & 0.43\\ 
+		\hline
+		$x^*(1,1)$ 	& 1	& 0.96\\ 
+		$x^*(0,1)$ & 1 & 0.62 - 0.76\\ 
+		$x^*(1,0)$ & $\pi$ & 0.34 - 0.45\\
+		$x^*(0,0)$ & 0 &  0.17 - 0.32\\
+			\hline
+\end{tabular}
+\caption{C50 ($\pi>\frac{10}{23}$)}
+\label{fig:C50}
+\end{table}
+%
+%%%%%
+%   
+% Low value of cooperation  %             
+%    
+%%%%%
+\section{Low Value of Cooperation $a=30$}
+
+%
+
+\subsection{F30}
+Following similar steps as for F50, we find the following possible continuation strategies.  As in F50, only types $C$ communicate and therefore upon communicating, a type $C_o$ faces type $C_o$ in state $(1,1)$ with probability $\frac{(1-\pi)\alpha_o}{\alpha^*}$ and type $C_p$ with probability $\frac{\pi\alpha_p}{\alpha^*}$, where $\alpha^*:=(1-\pi)\alpha_o+\pi\alpha_p$. Hence  playing $H$ is a best response when
+\[
+(1-\pi)\alpha_o (10+20x_o(1,1))+\pi\alpha_p 30\geq (1-\pi)\alpha_o (20+4x_o(1,1))+\pi\alpha_p 24,
+\]
+that is when
+\[
+x_o(1,1)\geq \frac{5}{8}-\frac{3\pi\alpha_p}{8(1-\pi)\alpha_o}
+	\]
+	or using $\pi\alpha_p=\alpha^*-(1-\pi)\alpha_o$,
+	\begin{equation}\label{f30:11}
+		x_o(1,1)\geq 1-\frac{3\alpha^*}{8(1-\pi)\alpha_o}.
+	\end{equation}
+Clearly, for any value of $\pi$, $x_o(1,1)=1$ satisfies this condition, but if $8(1-\pi)\alpha_o>3\alpha^*$, there is also a mixed strategy where $x_o(1,1)= 1-\frac{3\alpha^*}{8(1-\pi)\alpha_o}$. For the pure strategy, $x^*(1,1)=1$; for the mixed strategy, $x^*(1,1)=\frac{5}{8}$.
+
+
+In state $(1,0)$, playing $H$ is a best response for type $C_o$ only if
+\begin{equation*}
+	\begin{split}
+	((1-\pi)&(1-\alpha_o)+\pi(1-\alpha_p))(10+20x(0,1))+10\\ 
+	&\geq ((1-\pi)(1-\alpha_o)+\pi(1-\alpha_p))(20+4x(0,1))+20		
+\end{split}
+\end{equation*}
+that is when
+\[
+x(0,1)\geq \frac{5(2-\alpha^*)}{8(1-\alpha^*)}
+\]
+ which is clearly impossible as the right hand side is greater than one. Hence $x_o(1,0)=0$ and $x^*(1,0)=\pi\frac{\alpha_p}{\alpha^*}$.
+
+ Therefore, in state $(0,1)$, player $C$ can get cooperation only from a $C_p$ individual. Hence, playing $x(0,1)>0$ is optimal when
+ \[
+(1-\pi)\alpha_o 10+\pi\alpha_p 30\geq (1-\pi)\alpha_o 20+\pi\alpha_p 24
+ \]
+ that is when
+ \begin{equation}\label{f30:01}
+	\alpha^*\geq \frac{8}{3}(1-\pi)\alpha_o.
+ \end{equation}
+If $\alpha^*= \frac{8}{3}(1-\pi)\alpha_o$, $x(0,1)$ can take any value in $[0,1]$, in particular can be chosen to be inferior to $x^*(1,1)$.
+
+Finally, in state $(0,0)$, like in state $(1,0)$, we must have $x(0,0)=0$. 
+
+Because $x_o(1,0)=0$, type $C_p$ has a lower expected payoff from communication than type $C_o$. Therefore, if $C_p$ wants to commmunication, $\alpha_o=1$. But then, in order to have $x(0,1)>0$, we need to satisfy \eqref{f30:01} for these values, that is to have 
+\begin{equation}\label{cond:f30-01}	
+\alpha_p=\frac{5}{3}\frac{1-\pi}{\pi}.
+\end{equation}
+%
+Finally, given $x_o(1,1)=1$, $x_o(1,0)=0$, $x(0,1)>0$ and $x(0,0)=0$, type $C_p$ is indifferent between communicating and not when 
+\[\begin{split}
+	\frac{1}{2}&\left((1-\pi)30+\pi\alpha_p 30+\pi(1-\alpha_p)(10+20x(0,1))+10\right)-3\\ 
+	&=
+	\frac{1}{2}\left((1-\pi)10+\pi\alpha_p 30+\pi(1-\alpha_p)20+20\right)
+\end{split}
+\]
+%
+Using \eqref{cond:f30-01}, this yields to 
+\[
+x(0,1)=\frac{31-70\pi}{10(5-8\pi)}
+\]
+which is possible when $\pi\leq \frac{31}{70}$. Then, $\alpha^*=(1-\pi)+\frac{5}{3}(1-\pi)=\frac{8}{3}(1-\pi)$ and $x^*(1,0)=\frac{\pi\alpha_p}{\alpha^*}=\frac{5}{8}$.
+
+There is a poor fit of the theory with the empirical values. In ordre for $\alpha^*$ to be of the order of $0.3$, $\pi$ must be of the order of $0.88$, which is greater than $\frac{31}{70}$, the maximum value consistent with $x(0,1)$ positive. Similarly,  to have $x(0,1)$ of the order of $0.7$, $\pi$ should be approximately equal to $ 0.28$, but then  the theoretical value of $\alpha^*$ would be greater than $1$. 
+%
+\begin{table}[h!]
+	\begin{center}
+		\renewcommand{\arraystretch}{1.5} 
+\begin{tabular}{c c c}
+	& Theory 	& Exp \\
+	\hline 
+	$\alpha^*$ 	& $\frac{8}{3}(1-\pi)$	& 0.3\\
+	$\beta^*$ 	& 0 & 0.03\\ 
+	\hline
+	$x^*(1,1)$ 	& 1	& 0.86 - 0.88\\ 
+	$x^*(0,1)$ & $\frac{31-70\pi}{10(5-8\pi)}$ & 0.77 - 0.68\\ 
+	$x^*(1,0)$ & $\frac{5}{8}$ & 0.66 - 0.61\\
+	$x^*(0,0)$ & 0 &  0.08 - 0.16\\
+		\hline
+\end{tabular}
+\end{center}
+\caption{F30 ($\pi\leq \frac{31}{70}$)}
+\label{F30}
+\end{table}
+
+\subsection{C30}
+As for the C50 case, type $D_p$ equilibrium strategy must be $\beta_p=0$.
+
+In state $(1,1)$, playing $H$ is a best response for $C_o$ only if 
+\begin{equation}\label{c30-x11}
+x_o(1,1)\geq 1-\frac{3\alpha^*-5\beta^*}{8(1-\pi)\alpha_o}.
+\end{equation}
+
+Similar computations as in C50 show that 
+\begin{itemize}
+	\item $x_o(1,0)$ is positive if $x(0,1)\geq \frac{5}{8}\frac{2-\alpha^*-\beta^*}{1-\alpha^*}$, which is not possible if $\alpha^*>\beta^*$. Hence, $x_o(1,0)=0$ and $x^*(1,0)=\pi\frac{\alpha_p}{\alpha^*}$.
+	\item $x(0,1)$ can be positive only if $x_o(1,0)=0\geq 1-\frac{3\alpha^*-5\beta^*}{8(1-\pi)\alpha_o}$
+	\item $x(0,0)$ is equal to zero.
+\end{itemize}
+Given this, the incentive constraint for $D_o$ to be willing to communicate is the same as in C50, that is \eqref{C50-IC-com-D}. Hence, $\alpha_o=\alpha_p=\beta_o=1$, and $\alpha^*=1;\beta^*=1-\pi$. (Note that the state $(0,1)$ is an out of equilibrium state for players of type $C$.) 
+
+It follows that $x_o(1,1)$ can be positive if $x_o(1,1)\geq \frac{1098-13\pi}{8(1-\pi)}$. A mixed strategy $x_o(1,1)=\frac{10-13\pi}{8(1-\pi)}$ exists if the right hand side belongs to the interval  $[0,1)$, that is $\pi\in \left(\frac{2}{5},\frac{10}{13}\right)$. In this case, $x^*(1,1)=(1-\pi)x_o(1,1)+\pi=\frac{10-5\pi}{8}$, which ranges in the interval $\left(\frac{10}{13} , 1\right)$ when $\pi\in \left(\frac{2}{5},\frac{10}{13}\right)$.  
+
+If $\pi\leq \frac{10}{13}$, $1-\frac{3\alpha^*-5\beta^*}{8(1-\pi)\alpha_o}$ is positive, and therefore $x^*(0,1)=0$. As $\alpha=\alpha^*$, $x^*(1,0)=\pi$. If $\pi>\frac{10}{13}$, we have $x_o(1,1)=x(0,1)=1$. 
+
+
+\begin{table}[h!]
+	\begin{subtable}[]{0.45\linewidth}
+		{\renewcommand{\arraystretch}{1.2}%
+		\begin{tabular}{c c c}
+				& Theory 	& Exp \\
+				\hline
+				$\alpha^*$ 	& 1	& 0.75\\
+				$\beta^*$ 	& $1-\pi$ & 0.53\\ 
+				\hline
+				$x^*(1,1)$ 	& $\frac{10-5\pi}{8}$	& 0.68 - 0.48\\
+				$x^*(0,1)$ & 0 & 0.42 - 0.15\\ 
+				$x^*(1,0)$ & $\pi$ & 0.26 - 0.13\\
+				$x^*(0,0)$ & 0 &  0.12 - 0.1\\
+					\hline
+		\end{tabular}}
+	\caption{C30 ($\pi\in [2/5,10/13]$)\\{\tiny state $(0,1)$ is an out-of-equilibrium state}}
+	\end{subtable}
+	\hfill
+	\begin{subtable}[]{0.45\linewidth}
+		{\renewcommand{\arraystretch}{1.2}%
+			\begin{tabular}{c c c}
+					& Theory 	& Exp \\
+					\hline
+					$\alpha^*$ 	& 1	& 0.75\\
+					$\beta^*$ 	& $1-\pi$ & 0.53\\ 
+					\hline
+					$x^*(1,1)$ 	& 1	& 0.68 - 0.48\\
+					$x^*(0,1)$ & 1 & 0.42 - 0.15\\ 
+					$x^*(1,0)$ & $\pi$ & 0.26 - 0.13\\
+					$x^*(0,0)$ & 0 &  0.12 - 0.1\\
+						\hline
+			\end{tabular}}
+				\caption{C30 ($\pi>10/13$)\\{\tiny state $(0,1)$ is an out-of-equilibrium state}}
+	\end{subtable}
+	\caption{C30}
+	\label{tbl:c30 }
+\end{table}
+\bibliographystyle{agsm} 
+\bibliography{collusion.bib}
+
+
+
+
+
+\end{document}

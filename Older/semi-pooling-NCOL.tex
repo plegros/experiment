@@ -1,0 +1,195 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+\documentclass[12pt]{article} 
+\usepackage{tikz}
+
+%\usepackage{xcolor}
+%\usepackage{hyperref}
+%\usepackage{subfig}
+%\usepackage{xltxtra} ß
+\usepackage{enumerate}
+
+%\synctex=1
+\usepackage{amsmath,amsthm,amssymb,amsfonts} 
+\usepackage{graphicx} 
+\usepackage[center]{caption} 
+\usepackage{enumerate} 
+\usepackage[shortlabels]{enumitem} 
+\usepackage[obeyDraft,colorinlistoftodos]{todonotes} 
+\usepackage[onehalfspacing]{setspace}
+
+%\usepackage{fontspec}
+%\usepackage{xunicode}
+%\usepackage{xltxtra} \synctex=1 
+\usepackage{natbib} 
+\usepackage{subcaption} 
+\usepackage[onehalfspacing]{setspace}
+
+%\usepackage[round]{natbib}
+%\usepackage[all]{xy}
+%\setcounter{MaxMatrixCols}{10}
+%
+\renewcommand{\l}{\ell}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}{Acknowledgement}
+\newtheorem{algorithm}{Algorithm}
+\newtheorem{assumption}{Assumption}
+\newtheorem{axiom}{Axiom}
+\newtheorem{case}{Case}
+\newtheorem{claim}{Claim}
+\newtheorem{conclusion}{Conclusion}
+\newtheorem{condition}{Condition}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{criterion}{Criterion}
+\newtheorem{example}{Example}
+\newtheorem{exercise}{Exercise}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition} \theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{notation}{Notation}
+\newtheorem{problem}{Problem} \theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem{fact}{Fact}
+\newtheorem{solution}{Solution}
+\newtheorem{summary}{Summary}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary} 
+
+
+\begin{document} 
+\title{Standard Signalling (Without Cost of Lying)} 
+\author{Patrick Legros}
+\date{\today} 
+\maketitle
+
+
+Players have equiprobable types $C,D$ with payoff structures
+\begin{table}
+	[!htbp] \centering 
+	\begin{tabular}
+		{c c c} {\small{Own$\backslash$} Opponent} & $H$ & $L$ \\
+		\cline{2-3} $H$ & $50$& $10$\\
+		\cline{2-3} $L$ & $24$& $20$ \\
+		\cline{2-3}\\
+		\multicolumn{3}{c}{Type $C$} 
+	\end{tabular}
+	\hspace{5em} 
+	\begin{tabular}
+		{c c c} {\small{Own$\backslash$} Opponent} & $H$ & $L$ \\
+		\cline{2-3} $H$ & $22$& $10$\\
+		\cline{2-3} $L$ & $24$& $20$ \\
+		\cline{2-3}\\
+		\multicolumn{3}{c}{Type $D$} 
+	\end{tabular}
+	\caption{Regime NC} 
+\label{tbl:NC} 
+\end{table}
+
+\section{No Communication (NC)}
+Types $D$ play $L$. Let $x$ be the probability that type $C$ plays $H$. Then $x>0$ when
+\[
+	\frac{1}{2}(10+(50-10)x)+\frac{1}{2}(10)\geq \frac{1}{2}(20+4 x)+\frac{1}{2}(20)
+\]
+that is when\[
+x\geq \frac{5}{9}
+	\]
+Hence, either $x=0$, or $x=1$ or $x=\frac{5}{9}$.
+
+\section{Communication without Cost (CWC)}
+It is clear that if $C$ communicates with probability one, $D$ will communicate. Indeed, if $D$ does not communicate, in state $(1,0)$ types $C$ plays $L$ with  probability one and $D$ has a payoff of $20$ by not communicating. By communicating, $D$ has a payoff of $\frac{1}{2}(20+4x(1,1))+\frac{1}{2}(20)$, larger than $20$ if $x(1,1)>0$. Hence if types $C$ communicate with probability one, either they do not play $H$ or if they do types $D$ also communicate. This situation is observationally equivalent to the previous regime of no communication.
+
+Another possibility is when types $C$ and $D$ play a mixed strategy in communication. Let $\alpha$ the strategy of $C$ and $\beta$ the strategy of $D$ in communication. If the opponent has communicated, an agent believes that she faces a type $C$ with probability $\frac{\alpha}{\alpha+\beta}$. If the opponent has not communicated, an agent believes that she is facing a type $C$ with probability $\frac{1-\alpha}{2-\alpha-\beta}$.
+
+We will be looking at equilibria consistent with types $C$ playing $H$ with positive probability, and both types communicating, that is $\alpha\beta>0$. 
+
+\subsection{Continuation Strategies}
+
+\paragraph{State $(1,1)$.} It is optimal to set $x(1,1)>0$ if $\frac{\alpha}{\alpha+\beta}(10+40x(1,1))+\frac{\beta}{\alpha+\beta}10$ is greater than $\frac{\alpha}{\alpha+\beta}(20+4x(1,1))+\frac{\beta}{\alpha+\beta}20$, that is 
+\begin{equation}\label{CWC-BR11}
+	x(1,1)>0 \Leftrightarrow x(1,1)\geq \frac{5}{18}\frac{\alpha+\beta}{\alpha}.
+\end{equation}
+
+A necessary condition is that $\alpha\geq \frac{5}{18}\beta$.
+
+\paragraph{State $(0,1)$.} A non-communicating type $C$ facing a communicating opponent plays $H$ when (the belief structure is the same as in state $(1,1)$ but the players expects a communicating type $C$ to play $x(1,0)$),
+\begin{equation}\label{CWC-BR01}
+	x(1,0)\geq \frac{5}{18}\frac{\alpha+\beta}{\alpha}
+\end{equation}
+%
+and the necessary condition is the same as for having $x(1,1)>0$.
+
+\paragraph{State $(1,0)$.} An opponent of type $C$ plays $x(0,1)$, and therefore playing $H$ is optimal for a type $C$ who communicates when
+\[
+(1-\alpha)(10+40x(0,1))+(1-\beta) 10 \geq (1-\alpha)(20+4x(0,1))+(1-\beta) 20,
+\]
+\begin{equation}\label{CWC-BR10}
+	x(0,1)\geq \frac{5}{18}\frac{2-\alpha-\beta}{1-\alpha}
+\end{equation}
+
+and a necessary condition is that 
+\[
+1-\alpha\geq \frac{5}{18}(1-\beta)
+\]
+
+%
+\paragraph{State $(0,0)$.} The belief structure is the same as that of a communicating type $C$ in state $(1,0)$, and therefore $x(0,0)>0$ when
+\begin{equation}\label{CWC-BR00}
+	x(0,0)\geq \frac{5}{18}\frac{2-\alpha-\beta}{1-\alpha}
+\end{equation}
+with the same necessary condtion as in state $(1,0)$.
+
+It is possible to have all $x(i,j)>0$ when the bounds in \eqref{CWC-BR10} and \eqref{CWC-BR00} are not greater than one, that is when
+\begin{equation}\label{xij>0-CWC}
+	\frac{5}{13}\beta\leq \alpha \leq \frac{5}{13}\beta+\frac{8}{13}.
+\end{equation}
+%
+\subsection{Incentives to Communicate}
+It is possible that $x(i,j)>0$ for each state $(i,j)$. The necessary condition is \eqref{xij>0-CWC}. In this case, types $C$ weakly prefer to communicate and when
+\begin{equation}\label{IC-comm-CWC}
+	\begin{split}
+	\frac{\alpha}{2}& (10+40x(1,1))+\frac{1-\alpha}{2}(10+40x(0,1))+\frac{1}{2}10\\ 
+	&\geq \frac{\alpha}{2} (10+40x(1,0))+\frac{1-\alpha}{2}(10+40x(0,0))+\frac{1}{2}10
+	\end{split}
+\end{equation}
+Note that the condition reduces to
+\begin{equation}\label{CWC-NC-a,b>0}
+	\alpha (x(1,1)-x(1,0))+(1-\alpha)(x(0,1)-x(0,0))\geq 0.
+\end{equation}
+%
+If this condition binds, it also implies that type $D$ is indifferent between communicating and not communicating. If there is a strict inequality, types $D$ communicate with probability one.
+
+
+
+\paragraph{``Calibration''}
+In the experiment, we have $\alpha=82\%$ and $\beta=43\%$: these values satisfy the necessary condition \eqref{xij>0-CWC}. Because $\frac{\alpha+\beta}{\alpha}=\frac{125}{82}$ and $\frac{2-\alpha-\beta}{1-\alpha}= \frac{85}{18}$. Therefore, $x(0,0)>0$  requires $x(0,0)>\frac{425}{324}$, clearly absurd. Hence $x(0,0)=0$. Similarly, $x(1,0)>0$ requires that $x(0,1)\geq \frac{425}{324}$, which is also absurd. Hence, $x(i,j)=0$ for all $(i,j)\neq (1,1)$, in contradiction with the experimental results.
+% (fold)
+
+\section{Costly Communication}
+When a fee of $3$ has to be paid in order to communicate, types $D$ cannot benefit from communicating. Indeed, the gain from communication is equal to $2\alpha(x(1,1)-x(1,0))+2(1-\alpha)(x(0,1)-x(0,0)) $ which is less than $2$ and cannot compensate for the exogenous cost of $3$ of sending a message.
+
+Therefore $\beta=0$. The continuation strategies of type $C$ are as in the previous case. However the incentive of type $C$ to communicate is different. 
+
+If $x(i,j)=0$ for $(i,j)\neq (1,1)$, we need
+\[
+20 \alpha x(1,1)\geq 3,
+\]
+hence a minimum value of $\alpha$ of $15\%$ when $x(1,1)=1$. If $x(1,1)=\frac{5}{18})$, the condition is that $\alpha \geq 54\%$.
+
+If now $x(i,j)>0$ for all $(i,j)\neq (1,1)$, the incentive condition for types $C$ to communicate is
+\begin{equation}\label{ICcom-F50}
+	20 (\alpha(x(1,1)-x(1,0)+(1-\alpha)(x(0,1)-x(0,0))))\geq 3.	
+\end{equation}
+
+There are many solutions satisfying this condition as well as \eqref{CWC-BR11}-\eqref{CWC-BR00}.
+
+\paragraph{``Calibration''.} In the experiment, $\alpha=0.50$, $\beta\approx 0$, $x(1,1)=1$, $x(0,1)=80\%, x(1,0)=70\%, x(0,0)=31\%$. The only theoretical prediction that roughly matches the order of magnitudes of these values are $x(1,1)=x(1,0)=x(0,1)=1$ and $x(0,0)=\frac{5}{18}\frac{2-\alpha}{1-\alpha}$. For these values, the left hand side of \eqref{ICcom-F50} is $\frac{5}{18}(2-\alpha)$, which can be equal to $\frac{3}{20}$ when $\alpha=\frac{41}{25}$, clearly impossible. (Alternatively, if $\alpha=\frac{1}{2}$, the left hand side has value $\frac{15}{36}$, that is three times smaller than $\frac{3}{20}$.)
+
+We conclude that a standard model of signalling without cost-of-lying cannot explain the experimental data.
+
+\bibliographystyle{agsm} 
+\bibliography{}
+
+\end{document}
