@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.21)  6 FEB 2021 16:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.21)  6 FEB 2021 16:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -435,9 +435,6 @@ File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 \l__pdf_internal_box=\box61
 ) (/Users/patricklegros/Dropbox/Git_Projects/experiment-1/HGL-experiment.aux
 
-LaTeX Warning: Label `IC-comm-CWC' multiply defined.
-
-
 LaTeX Warning: Label `fig:fig2-CT-instructions' multiply defined.
 
 )
@@ -532,84 +529,84 @@ Overfull \hbox (2.52815pt too wide) detected at line 505
 []
  []
 
-[25] [26] [27] [28] [29] [30] [31] [32] [33]
-<fig1-NC-instructions.png, id=153, 1156.32pt x 650.43pt>
+[25] [26] [27] [28] [29] [30] [31] [32]
+<fig1-NC-instructions.png, id=150, 1156.32pt x 650.43pt>
 File: fig1-NC-instructions.png Graphic file (type png)
 <use fig1-NC-instructions.png>
-Package pdftex.def Info: fig1-NC-instructions.png  used on input line 706.
+Package pdftex.def Info: fig1-NC-instructions.png  used on input line 681.
 (pdftex.def)             Requested size: 390.0pt x 219.36674pt.
- [34 </Users/patricklegros/Dropbox/Git_Projects/experiment-1/fig1-NC-instructions.png>]
-<fig2-NC-instructions.png, id=157, 1156.32pt x 650.43pt>
+ [33 </Users/patricklegros/Dropbox/Git_Projects/experiment-1/fig1-NC-instructions.png>]
+<fig2-NC-instructions.png, id=154, 1156.32pt x 650.43pt>
 File: fig2-NC-instructions.png Graphic file (type png)
 <use fig2-NC-instructions.png>
-Package pdftex.def Info: fig2-NC-instructions.png  used on input line 719.
+Package pdftex.def Info: fig2-NC-instructions.png  used on input line 694.
 (pdftex.def)             Requested size: 350.99762pt x 197.43304pt.
- [35 </Users/patricklegros/Dropbox/Git_Projects/experiment-1/fig2-NC-instructions.png>] [36]
-<fig1-CT-instructions.png, id=164, 1156.32pt x 650.43pt>
+ [34 </Users/patricklegros/Dropbox/Git_Projects/experiment-1/fig2-NC-instructions.png>] [35]
+<fig1-CT-instructions.png, id=161, 1156.32pt x 650.43pt>
 File: fig1-CT-instructions.png Graphic file (type png)
 <use fig1-CT-instructions.png>
-Package pdftex.def Info: fig1-CT-instructions.png  used on input line 788.
+Package pdftex.def Info: fig1-CT-instructions.png  used on input line 763.
 (pdftex.def)             Requested size: 350.99762pt x 197.43304pt.
- [37] [38 </Users/patricklegros/Dropbox/Git_Projects/experiment-1/fig1-CT-instructions.png>]
-<fig2-CT-instructions.png, id=172, 1156.32pt x 650.43pt>
+ [36] [37 </Users/patricklegros/Dropbox/Git_Projects/experiment-1/fig1-CT-instructions.png>]
+<fig2-CT-instructions.png, id=169, 1156.32pt x 650.43pt>
 File: fig2-CT-instructions.png Graphic file (type png)
 <use fig2-CT-instructions.png>
-Package pdftex.def Info: fig2-CT-instructions.png  used on input line 808.
+Package pdftex.def Info: fig2-CT-instructions.png  used on input line 783.
 (pdftex.def)             Requested size: 350.99762pt x 197.43304pt.
-<fig3-CT-instructions.png, id=173, 1156.32pt x 650.43pt>
+<fig3-CT-instructions.png, id=170, 1156.32pt x 650.43pt>
 File: fig3-CT-instructions.png Graphic file (type png)
 <use fig3-CT-instructions.png>
-Package pdftex.def Info: fig3-CT-instructions.png  used on input line 820.
+Package pdftex.def Info: fig3-CT-instructions.png  used on input line 795.
 (pdftex.def)             Requested size: 350.99762pt x 197.43304pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[39 </Users/patricklegros/Dropbox/Git_Projects/experiment-1/fig2-CT-instructions.png>] [40 </Users/patricklegros/Dropbox/Git_Projects/experiment-1/fig3-CT-instructions.png>] [41]
-<fig1-FC-instructions.png, id=183, 1156.32pt x 650.43pt>
+[38 </Users/patricklegros/Dropbox/Git_Projects/experiment-1/fig2-CT-instructions.png>] [39 </Users/patricklegros/Dropbox/Git_Projects/experiment-1/fig3-CT-instructions.png>] [40]
+<fig1-FC-instructions.png, id=180, 1156.32pt x 650.43pt>
 File: fig1-FC-instructions.png Graphic file (type png)
 <use fig1-FC-instructions.png>
-Package pdftex.def Info: fig1-FC-instructions.png  used on input line 886.
+Package pdftex.def Info: fig1-FC-instructions.png  used on input line 861.
 (pdftex.def)             Requested size: 350.99762pt x 197.43304pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[42]
+[41]
 File: fig2-CT-instructions.png Graphic file (type png)
 <use fig2-CT-instructions.png>
-Package pdftex.def Info: fig2-CT-instructions.png  used on input line 908.
+Package pdftex.def Info: fig2-CT-instructions.png  used on input line 883.
 (pdftex.def)             Requested size: 350.99762pt x 197.43304pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<fig3-FC-instructions.png, id=187, 1156.32pt x 650.43pt>
+<fig3-FC-instructions.png, id=184, 1156.32pt x 650.43pt>
 File: fig3-FC-instructions.png Graphic file (type png)
 <use fig3-FC-instructions.png>
-Package pdftex.def Info: fig3-FC-instructions.png  used on input line 920.
+Package pdftex.def Info: fig3-FC-instructions.png  used on input line 895.
 (pdftex.def)             Requested size: 350.99762pt x 197.43304pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[43 </Users/patricklegros/Dropbox/Git_Projects/experiment-1/fig1-FC-instructions.png>] [44] [45 </Users/patricklegros/Dropbox/Git_Projects/experiment-1/fig3-FC-instructions.png>] (/Users/patricklegros/Dropbox/Git_Projects/experiment-1/HGL-experiment.bbl) [46] (/Users/patricklegros/Dropbox/Git_Projects/experiment-1/HGL-experiment.aux)
+[42 </Users/patricklegros/Dropbox/Git_Projects/experiment-1/fig1-FC-instructions.png>] [43] [44 </Users/patricklegros/Dropbox/Git_Projects/experiment-1/fig3-FC-instructions.png>] (/Users/patricklegros/Dropbox/Git_Projects/experiment-1/HGL-experiment.bbl) [45] (/Users/patricklegros/Dropbox/Git_Projects/experiment-1/HGL-experiment.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15681 strings out of 480608
- 303285 string characters out of 5903630
- 524750 words of memory out of 5000000
- 31273 multiletter control sequences out of 15000+600000
+ 15680 strings out of 480608
+ 303271 string characters out of 5903630
+ 524739 words of memory out of 5000000
+ 31272 multiletter control sequences out of 15000+600000
  546861 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,17n,83p,2037b,356s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb>
-Output written on /Users/patricklegros/Dropbox/Git_Projects/experiment-1/HGL-experiment.pdf (46 pages, 549412 bytes).
+Output written on /Users/patricklegros/Dropbox/Git_Projects/experiment-1/HGL-experiment.pdf (45 pages, 547999 bytes).
 PDF statistics:
- 265 PDF objects out of 1000 (max. 8388607)
- 173 compressed objects within 2 object streams
+ 262 PDF objects out of 1000 (max. 8388607)
+ 171 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  144 words of extra memory for PDF output out of 10000 (max. 10000000)
 
