@@ -266,7 +266,7 @@ The intuitive appeal of this equilibrium-selection device is obvious --- more co
 	For $\pi =0.5$, CT has an equilibrium in communication-monotone strategies with the following properties: 
 	\begin{enumerate}[i)]\setlength\itemsep{0em}
 		\item All $C$-type players communicate: $\alpha_o=\alpha_p=1$. This implies that $\alpha=1$.
-		\item $D$-type opportunists communicate, while $D$-type promise-keepers do not: $\beta_o=1$, $\beta_p=0$. This implies that $\beta=0.5$.
+		\item $D$-type opportunists communicate, while $D$-type promise-keepers do not: $\beta_o=1$, $\beta_p=0$. This implies that types $D$ communicate with probability $\beta=0.5$.
 		\item All $D$-type players choose $L$.
 		\item The equilibrium second stage actions of C-type promise-keepers are:  $x_p(1,1)=x_p(0,1)=x_p(1,0)=1$; $x_p(0,0)=0$.
 		\item The equilibrium second stage actions of C-type opportunists are: $x_o(1,1)=x_o(0,1)=1$; $x_o(1,0)=x_o(0,0)=0$.
@@ -281,7 +281,7 @@ Note that according to this equilibrium a $C$-type should never be confronted wi
 FC also exhibits an equilibrium in communication-monotone strategies. This equilibrium is independent of the portion of promise-keepers.
 
 \begin{proposition}\label{prop:FC}
-	FC has an equilibrium in communication-monotone strategies with the following properties.
+	For $\pi=\frac{1}{2}$, FC has an equilibrium in communication-monotone strategies with the following properties.
 	\begin{enumerate}[i)]\setlength\itemsep{0em}
 		\item $C$-type promise-keepers and $C$-type opportunists communicate with the same probability: $\alpha_o=\alpha_p=\frac{53}{130}$. This implies that $\alpha=\frac{53}{130}\approx 0.41$.
 		\item All $D$-type players do not communicate: $\beta_o=\beta_p=0$. This implies that $\beta=0$.
@@ -575,7 +575,7 @@ Equilibrium payoffs are bounded above by $32$, when $\alpha=1$ and types $C$ get
 
 \subsection*{Proof of Proposition \ref{prop:FC-bounded}}
 
-	If there is no communication, Proposition \ref{prop:NC} tells us that the maximum payoff to types $C$ is equal to $30$, and is achieved as types $C$ play $H$ while types $D$ play $L$. In regime FC, types $D$ have a dominant strategy not to incur the exogenous cost of $3$ and therefore do not communicate. If type $C_p$ communicates, type $C_o$ will communicate. There are therefore two types of communication equilibria: when both types communicates and when only type $C_o$ communicates. 
+	If there is no communication, Proposition \ref{prop:NC} tells us that the maximum payoff to types $C$ is equal to $30$, and is achieved as types $C$ play $H$ while types $D$ play $L$. In regime FC, types $D$ have a dominant strategy not to incur the exogenous cost of $3$ and therefore do not communicate. If type $C_p$ communicates, type $C_o$ will communicate because $C_o$ has the option to play $L$ while type $C_p$ is committed to play $H$ after ecommunication. There are therefore two types of communication equilibria: when both types communicates and when only type $C_o$ communicates. 
 	
 	If both types communicate, the best they can achieve is to play $H$ if there is communication by both players, while type $C_o$ plays $L$ against a not-communicating player and type $C_p$ -- our promise keeper -- plays $H$ against a not-communicating player. Hence the expected payoff of type $C_o$ is equal to $\frac{1}{2}50+\frac{1}{2}20-3=32$ while that of type $C_p$ is equal to $\frac{1}{2}50+\frac{1}{2}10-3=27$, hence the expected value of a type $C$ is $(1-\pi)32+\pi 27=32-5\pi$ which is less than $30$ when $\pi$ is greater than $\frac{2}{5}$. 
 
@@ -585,153 +585,27 @@ Equilibrium payoffs are bounded above by $32$, when $\alpha=1$ and types $C$ get
 
 
 \subsection*{Proof of Proposition \ref{prop:CT}}
-\textcolor{red}{I think there are some mistakes in the proof (please check the comments). Instead, can we use the following proof in blue, which is also simpler?}
 
-\textcolor{blue}{We are looking for an equilibrium in which all $C$-type and $D$-type opportunist players communicate, while $D$-type promise-keepers do not communicate. If a player receives a message from the opponent, she believes that the other player is of type $C_o$ with a probability of $\frac{1-\pi}{2-\pi}=\frac{1}{3}$, $C_p$ with a probability of $\frac{\pi}{2-\pi}=\frac{1}{3}$, and $D_o$ with a probability of $\frac{1-\pi}{2-\pi}=\frac{1}{3}$. If the opponent does not communicate then the player is type $D_p$ with a probability $1$.}
+It is sufficient to verify that the strategies are best responses. Let us assume (i), (ii) to evaluate the optimality of the best responses in (iv)-(v), and then go back to showing that (i)-(ii) are best responses.
 
-\textcolor{blue}{In the second stage, in all cases, it is optimal for $D_o$ type to play $L$. $D_h$ plays $L$ if she has not communicated and plays $H$ if she has communicated. $C_h$ type plays $H$ if she has communicated and follows the same strategy as $C_o$ if she has not communicated.}
+\paragraph{Proving (iii)-(viii) using (i)-(ii).} (iii) relates to the dominant strategy of playing $L$ for type $D_o$. For type $D_p$ who is not communicating, playing $L$ is also a dominant strategy in states $(0,a)$. Because non-communicating players are type $D_p$, playing $L$ in states $(a,0)$ is a best response for types $C_o$, hence (v) is established. 
 
-\textcolor{blue}{In the state (1,1), playing $H$ is optimal for $C_o$ if $$ (10+40x_o(1,1))+50+10\geq (20+4x_o(1,1))+24+20,$$ or $x(1,1)\geq-1/6$ which is always true. We can conclude that $x(1,1)=1$.}
+Type $C_o$ plays $L$ in state $(1,0)$ because he believes to face a type $D_p$ who plays $L$. Hence $x_o(1,0)=0$. In state $(1,1)$ type $C_o$ believes that there is an equal probability of playing against types $C_o,C_p,D_o$. Playing $H$ is optimal since $\frac{1}{3}(50+50+10)$ is greater than $\frac{1}{3}(24+24+20)$. This proves (v)
 
-\textcolor{blue}{In the state (1,0), $C_o$ believes that the other player is type $D_p$ with a probability $1$ and plays $x(1,0)=0$. In the state $(0,0)$, type $C_o$ and $C_p$ believe that the other player is type $D_p$ with a probability $1$ and play $x(0,0)=0$. Note that $(0,0)$ is off-equilibrium state for both types of $C$.}
+Types $C_p$ always play $H$ in states $(1,a)$, but -- this is out of equilibrium -- in state $(0,0)$, type $C_p$ will play $L$. To show that $x(0,1)=1$, note that in this state, types $C$ believe that  there is an equal probability of playing against types $C_o,C_p,D_o$, and while types $C_o,D_o$ play $L$, playing $H$ is optimal in state $(0,1)$ when $10+50+10\geq 20+24+20$, which is the case. This proves (iv).
 
-\textcolor{blue}{In the state (0,1), playing $H$ is optimal for $C_o$ and $C_p$ if $$ (10+40x_o(1,0))+50+10\geq (20+4x_o(1,0))+24+20,$$ or $x(1,0)\geq-1/6$ which is always true. We can conclude that $x(0,1)=1$.}
+The other results (v)-(viii) are direct consequences of (iii)-(iv).
 
-\textcolor{blue}{Now we show that whether communication strategies are optimal for the players. It is obvious that $D_p$ type will prefer not to communicate, as she has to play $H$ following her communication. It is also obvious that $D_o$ type prefers communication. If $D_o$ does not communicate, she will get an expected payoff of $\frac{1}{4}24+\frac{3}{4}20=21$, while by communication she can get an expected payoff of $\frac{1}{2}24+\frac{1}{2}10=22$. Note that following communication $C_o$ type can deviate from $H$, while $C_p$ type has to play $H$. Therefore, $C_p$ type has weaker incentives to communicate than $C_o$ type and it is sufficient to show that $C_p$ prefers to communicate.}
+\paragraph{Proving (i)-(ii).} Type $D_p$ has a payoff of $20$ by not communicating. If type $D_p$ communicates, it plays $H$ in all states $(1,a)$ and therefore, given the continuation strategies (iii)-(v), type $D_p$'s payoff would be $\frac{1}{2}(22)+\frac{1}{2}(10)$ which is clearly inferior to $20$. Hence $\beta_p=0$ is a best response for $D_p$.
 
-\textcolor{blue}{If $C_p$ communicates then she will get an expected payoff of $\frac{1}{2}50+\frac{1}{2}10=30$. If she does not communicate, then she will get $\frac{1}{4}50+\frac{3}{4}20=27.5<30$. So type $C_p$ and $C_o$ will choose $\alpha_o=\alpha_p=1$.}
+For $D_o$, not communicating yields a payoff of $20$ while communicating yields a payoff of $\frac{1}{2}24+\frac{1}{2}20$, which is greater than $20$. Hence $\beta_o=1$ is the best response for types $D_o$.
 
-\textcolor{blue}{In this equilibrium, $C_o$'s expected payoff is $32.5$, $C_p$'s expected payoff is $30$, $D_o$'s expected payoff is $22$ and $D_p$'s expected payoff is $20$. The expected equilibrium payoff of $C$ type is $31.25$ and the expected payoff of $D$ is $21.5$.}
-
-Because $C_o,C_p$ have the same strategy space and same payoffs, we will assume without loss of generality that $x_o(0,j)=x_p(0,j)$ and denote the common value by $x(0,j)$.\footnote{%
-Each type takes into account the expected probability that a communicating player plays $H$, hence they have the same best response.
-} Because $C_p$ will play $H$ in state $(1,0)$, there is an additional cost of communicating for such players since they will play $H$ to keep their promise while it would be optimal -- absent the cost of lying -- to play $L$. Types $C_o$ do not face this additional cost. Therefore the incentives to communicate are weaker for types $C_p$, and we can focus on the incentive compatibility condition of type $C_p$ whenever the overall probability of communication of types $C$ is greater than $1-\pi$.
+For a type $C_p$ who does not communicate, the equilibrium payoff is $ \frac{1}{4}10+\frac{1}{4}50+\frac{1}{4}10+\frac{1}{4}20=25$\footnote{
+Indeed, in state $(0,1)$ type $C_p$ faces types $C_o,D_o$ who play $L$	and type $C_p$ who plays $H$. In state $(0,0)$ type $C_p$ faces $D_p$ and plays $L$.
+} while by communicating the equilibrium payoff is $\frac{1}{2}50+\frac{1}{2}10=30$, which is best. Hence type $C_p$ plays $\alpha_p=1$. Because type $C_o$ has more options than type $C_p$ after communication but the same options after no communication, it is also the case that $\alpha_o=1$. This proves (i)-(ii) and establishes Proposition \ref{prop:CT}.
 
 
-If $D_o$ communicates, he will play $L$ and weakly prefers this to not communicate if $H$ is more likely to be played by a player who communicates. By contrast, because $D_p$ is constrained to play $H$ after communication, she will strictly prefer to not communicate.\footnote{%
-The same logic does not apply to types $C$ because if $x_o(1,0)$ is positive, type $C_p$ also \emph{wants} to play $H$. If however types $D_o$ plays $L$ after communication, type $D_p$ \emph{cannot commit to} play $L$ because of the cost of lying.} 
 
-
-The probability that type $D_o$ communicates is $\beta_o$. (Hence, $\beta^*=(1-\pi)\beta_o$.)
-%
-\subsubsection*{Continuation Strategies for $C$}
-When the state is $(j,1)$, then the opponent is type $C_o$ with probability $\frac{(1-\pi)\alpha_o}{(1-\pi)\alpha_o+\pi\alpha_p+(1-\pi)\beta_o}$, is type $C_p$ with probability $\frac{\pi\alpha_p}{(1-\pi)\alpha_o+\pi\alpha_p+(1-\pi)\beta_o}$, and type $D_o$ with the remaining probability $\frac{(1-\pi)\beta_o}{(1-\pi)\alpha_o+\pi\alpha_p+(1-\pi)\beta_o}$.
-
-\paragraph{State $(1,1)$.} Playing $H$ is optimal for $C_o$ if
-\[\begin{split}
-	(1-\pi)\alpha_o (10+&40 x_o(1,1))+\pi \alpha_p 50+(1-\pi)\beta_o (10)\\
-		&\geq (1-\pi)\alpha_o (20+4 x_o(1,1))+\pi \alpha_p (24)+(1-\pi)\beta_o (20)
-\end{split}
-\]
-or, using $\pi\alpha_p=\alpha^*-(1-\pi)\alpha_o$, when
-\begin{equation}\label{c50-x11}
-	x_o(1,1)\geq 1-\frac{13\alpha^*-5\beta^*}{18(1-\pi)\alpha_o}.	
-\end{equation}
-%
-\paragraph{State $(1,0)$.} Playing $H$ is a best response for $C_o$ if
-\[\begin{split}
-	(1-\alpha) (10+&40 x(0,1))+((1-\pi)(1-\beta_o)+\pi) 10\\
-	&\geq (1-\alpha) (20+4 x(0,1))+((1-\pi)(1-\beta_o)+\pi) 20
-\end{split}
-\]
-or,
-\[
-x(0,1)\geq \frac{5}{18}\frac{2-\alpha^*-\beta^*}{1-\alpha^*}.
-\]
-The bound is clearly positive and is not greater than one when 
-\begin{equation*}
-	13\alpha^* \leq  5\beta^*+8.
-\end{equation*}
-%
-\textcolor{red}{which is impossible if $\alpha^*>\beta^*$}. Hence, $x_o(1,0)=0$, implying that $x^*(1,0)=\frac{\pi \alpha_p}{\alpha^*}$, that is the conditional probability that $C$ is of type $C_p$ conditional on communicating.
-%							
-\paragraph{State $(0,1)$.} Playing $H$ is a best response for $C$ if
-\[\begin{split}
-	(1-\pi)\alpha_o (10+&40 x_o(1,0))+\pi \alpha_p 50+(1-\pi)\beta_o (10)\\
-		&\geq (1-\pi)\alpha_o (20+4 x_o(1,0))+\pi \alpha_p(24)+(1-\pi)\beta_o (20)
-\end{split}
-\]
-hence, using $x_o(1,0)=0$;  
-\[
-	0\geq 1-\frac{13\alpha^*-5\beta^*}{18(1-\pi)\alpha_o}.
-\]
-which is possible only if 
-\begin{equation}\label{cond-c50-01}
-	\pi\alpha_p\geq \frac{5}{18}(\alpha^*+\beta^*).
-\end{equation}
-
-
-%
-\paragraph{State $(0,0)$.} Playing $H$ is optimal under a similar condition as in state $(1,0)$, that is $x(0,0)>0$ when
-\[
-x(0,0)\geq \frac{5}{18}\frac{2-\alpha^*-\beta^*}{1-\alpha^*}.
-\]
-the right hand side is greater than one when $\alpha^*>\beta^*$, and therefore $x^*(0,0)=0$.
-
-\subsubsection*{Incentives to Communicate}
-$D$ weakly prefers to communicate than not communicating ($\beta_o>0$) when
-\[\begin{split}
-(1-\pi)&[\alpha_o(20+4 x_o(1,1))+(1-\alpha_o)(20+4x(0,1)))]\\ 
-&+\pi [\alpha_p 24+(1-\alpha_p)(20+4x(0,1)]+20\\ 
-	\geq	&(1-\pi)[\alpha_o(20+4 x_o(1,0))+(1-\alpha_o)(20+4x(0,0))]\\ 
-	&+\pi [\alpha_p 24+(1-\alpha_p)(20+4x(0,0)]+20
-\end{split}
-\]
-or,
-\begin{equation}\label{C50-IC-com-D}
-\alpha_o (1-\pi) (x_o(1,1)-x_o(1,0))+(1-\alpha^*)(x(0,1)-x(0,0))\geq 0
-\end{equation}
-%
-This is the same condition as for $C_p$, hence if $\beta_o>0$, we also have $\alpha_p>0$. Type $C_o$ is not constrained in her actions after communicating and because $x_o(1,0)=0$, it must be the case that $\alpha_o=1$ if $\alpha_p$ is positive. 
-
-The incentive condition \eqref{C50-IC-com-D} is not binding whenever 
-$x_o(1,1)>x_o(1,0)$ or $x(0,1)>x(0,0)$. This is the case whenever types $C_o$ communicate and $x_o(1,1)>0$. Therefore, $\alpha^*=\beta_o=1$, $\beta^* = 1-\pi$. It follows that equilibria are in pure strategies.
-
-If $\alpha_p=\alpha^*=1$ and $\beta^*=1-\pi$, \eqref{c50-x11} is $x_o(1,1)\geq \frac{10-23\pi}{18(1-\pi)}$ while \eqref{cond-c50-01} is $0\geq \frac{10-23\pi}{18(1-\pi)}$. Hence a necessary condition to have $x(0,1)$ positive is that $\pi\geq \frac{10}{23}$, in which case we have generically $x(0,1)=x(1,1)=1$
-
-The table below compares the theoretical values to the experiment values when using the ``closest'' theoretical values. (Note that as $\alpha^*=1$, state $(0,1)$ is an out-of-equilibrium state for type $C$ agents.)
-
-The table below compares the theoretical values to the experiment values when using the ``closest'' theoretical values. (Note that as $\alpha^*=1$, state $(0,1)$ is an out-of-equilibrium state for type $C$ agents.)
-%
-\begin{table}[h!]
-		\centering
-		\begin{tabular}{c c}
-		& Theory 	 \\
-		\hline
-		$\alpha^*$ 	& 1	\\
-		$\beta^*$ 	& $1-\pi$ \\ 
-		\hline
-		$x^*(1,1)$ 	& 1	\\ 
-		$x^*(0,1)$ & 1 \\ 
-		$x^*(1,0)$ & $\pi$ \\
-		$x^*(0,0)$ & 0 \\
-			\hline
-\end{tabular}
-\caption{CT ($\pi>\frac{10}{23}$)}
-\label{fig:C50}
-\end{table}
-%
-It follows that the payoff of type $C_o$ is
-%
-\[
-u_{C_o}=\frac{1}{2}50+\frac{1-\pi}{2}10+\frac{\pi}{2}20
-\]
-while type $C_p$ has a lower payoff than type $C_o$ in state $(0,1)$.
-%
-\[
-	u_{C_p}=\frac{1}{2}50+\frac{1-\pi}{2}10+\frac{\pi}{2}10
-\]
-and when $\pi=\frac{1}{2}$, $u=31.25$. Type $D_o$ gets a premium of $4$ when facing types $C_k$ 
-%
-\[
-u_{D_o}=\frac{1}{2}24+ \frac{1}{2}20
-\]
-while type $D_p$ gets a premium of $4$ in state $(0,1)$ only when facing a type $C_p$
-\[
-u_{D_p}=\frac{1-\pi}{2}20+\frac{\pi}{2}24+\frac{1}{2}20
-\]
-%
-It follows that $u_D=21.5$.
 %
 %
 %%%%%
@@ -741,104 +615,40 @@ It follows that $u_D=21.5$.
 %%%%%
 
 \subsection*{Proof of Proposition \ref{prop:FC}}
-When there is an exogenous cost of communication, players of type $D_k$ do not communicate. Indeed, by communicating, a $D_k$ player can get at most a benefit of $2$ while the cost of communication is $3$.\footnote{%
-The strategy of player $D_k$ depends on whether she communicates but not on the communication of her opponent, hence $y_k(a,1)=y_k(a,0)$ for all $k\in\{o,p\}$ and $i=0,1$. Hence, communicating or not yields the same payoff for a type $D$ when facing another type $D$. The most $D$ can get against a type $C$ playing $H$ is equal to $4$, hence $2$ in expectation.
-} Therefore only types $C_k$ communicate and given the opponent communicates, the players know that they are facing a $C$ type player. 
+When there is an exogenous cost of communication, players of type $D_k$ do not communicate: this was established in the absence of promise keepers, and if $D_o$ does not want to communicate, type $D-p$ will not want to communicate either because he has less options than $D_o$ after communication. 
 
-In the second stage, both $D_o$ plays $L$ in all states, while $D_p$ plays $L$ if she has not communicated and plays $H$ if she communicates. As in the case CT, type $C_p$ will play $H$ in all states $(1,i)$, $i=0,1$. 
+Therefore only types $C_k$ communicate and given the opponent communicates, the players know that they are facing a type-$C$ player. The incentives to communicate differ for types $C_o,C_p$ because $C_p$ cannot play $L$ in state $(1,0)$ while type $C_o$ can. This explains why we should expect that $\alpha_o$ is greater than $\alpha_p$. To simplify, the Proposition exhibits a symmetric strategy in communication\footnote{Note that only the average probability $\pi\alpha_p+(1-\pi)\alpha_o$ is observed in the experiment.
+}
 
-\textcolor{red}{I suggest the proof in blue.}
+As for the proof of Proposition \ref{prop:CT}, we will assume the communication strategies in (i)-(ii) to show the optimality of the continuation strategies in (iii)-(v). Note that we also consider a symmetric strategy for types $C_o,C_p$, who play $H$ with probability in all states except state $(0,0)$ where they play $H$ with probability $\frac{115}{154}$.
 
-\textcolor{blue}{First we show that given $\alpha_o=\alpha_p=\alpha=\frac{53}{130}$, it is optimal for $C$ types to play $x_i(a,b)=1$ if $(a,b)\neq (0,0)$ and $x_i(0,0)=\frac{115}{154}$ for $i\in\{0,1\}$.}
-
-\textcolor{blue}{Given the opponent communicates, a player believes that the opponent is type $C_p$ with a probability $\pi=1/2$ and type $C_k$ with a probability $1-\pi=1/2$. If the opponent does not communicate, then a player believes that the opponent is type $C_p$ with a probability of $\frac{\pi (1-\alpha)}{2-\alpha}=\frac{1-\alpha}{2(2-\alpha)}$, $C_o$ with a probability of $\frac{(1-\pi) (1-\alpha)}{2-\alpha}=\frac{1-\alpha}{2(2-\alpha)}$, $D_p$ with a probability of $\frac{\pi }{2-\alpha}=\frac{1}{2(2-\alpha)}$ and $D_o$ with a probability of $\frac{(1-\pi) }{2-\alpha}=\frac{1}{2(2-\alpha)}$.}
-
-\textcolor{blue}{In the state $(1,1)$, player $C_o$ plays $H$ if $$ \frac{1}{2} 50 + \frac{1}{2} (10+40x_o(1,1))\geq \frac{1}{2} 24 + \frac{1}{2} (20+4x_o(1,1)), $$ or if $x_o(1,1)\geq -\frac{4}{9}$ which is always true. So, $x_o(1,1)=1$.}
-
-\textcolor{blue}{In the state $(0,1)$, player $C_o$ and $C_p$ play $H$ if $$ \frac{1}{2} 50 + \frac{1}{2} (10+40x_o(1,0))\geq \frac{1}{2} 24 + \frac{1}{2} (20+4x_o(1,0)), $$ or if $x_o(1,0)\geq -\frac{4}{9}$ which is always true. So, $x_o(0,1)=x_p(0,1)=1$.}
-
-\textcolor{blue}{In the state $(1,0)$, given $x_k(0,1)=1$, player $C_o$ plays $H$ if $$ \frac{(1-\alpha)}{2(2-\alpha)} 50 + \frac{(1-\alpha)}{2(2-\alpha)} 50 + \frac{1}{(2-\alpha)} 10 \geq \frac{(1-\alpha)}{2(2-\alpha)} 24 + \frac{(1-\alpha)}{2(2-\alpha)} 24 + \frac{1}{(2-\alpha)} 20, $$ or if $\alpha \leq \frac{16}{26}$. Given that $\alpha=\frac{53}{130}<\frac{16}{26}$, $C_o$ type prefers to play $H$ and $x_o(1,0)=1$.}
-
-\textcolor{blue}{In the state $(0,0)$, player $C_o$ and $C_p$ play $H$ if
-\begin{align*}
-	&\frac{1-\alpha}{2(2-\alpha)} (10+40x_o(0,0))+ \frac{1-\alpha}{2(2-\alpha)}(10+40 x_p(0,1))+\frac{1}{2-\alpha}10\\
-		&\geq \frac{1-\alpha}{2(2-\alpha)} (20+4x_o(0,0))+\pi \frac{1-\alpha}{2(2-\alpha)}(20+4 x_p(0,0)) +\frac{1}{2-\alpha}20.
-\end{align*}
-As both $C$ types have the same incentives to play $L$, we can assume that $x_p(0,0)=x_o(0,0)=x(0,0)$. The condition holds when $x(0,0)\geq \frac{20-10\alpha}{36(1-\alpha)}=\frac{115}{154}$. $C$ types are indifferent between $L$ and $H$ when $x(0,0)=\frac{115}{154}$.}
-
-\textcolor{blue}{Now we show that $\alpha_o=\alpha_p=\alpha=\frac{53}{130}$ is an equilibrium given the player's strategies in the second stage. As both $C$ types play $L$ after they communicate, i.e., $x(1,j)=1$ and they have the same strategies in the other states, the players have the same incentives to communicate, i.e., $\alpha_o=\alpha_p=\alpha$. If $C$ type communicates, then she gets a payoff $\frac{1}{2}50+\frac{1}{2}10-3=27$. If she does not communicate she get an expected payoff $\frac{1}{2}\left(\alpha 50 + (1-\alpha) (10+40x(0,0))\right)+\frac{1}{2} 10$. This means $C$ types are indifferent between communicating and not communicating if $\alpha=\frac{17-20x(0,0)}{20(1-x(0,0)}=\frac{53}{130}$, given $x(0,0)=\frac{115}{154}$.}
-
-\textcolor{blue}{In the equilibrium, $C$ types communicate with a probability $\frac{53}{130}$ and they play $H$ if the state is $(a,b)\neq (0,0)$ with probability $1$ or if the state is $(0,0)$ with probability $\frac{115}{154}$. If two $C$-types matched, they coordinate on $(H,H)$ with a probability $1-(1-\alpha)^2 (1-(x(0,0))^2)\approx 0.8448$. $C$ types get expected payoff equal to $27$. $D$ types' expected payoff is equal to $\frac{1}{2}\left(\alpha 24 +(1-\alpha) (20+4 x(0,0)) \right) + \frac{1}{2} 20=21.7$.}
-
-If it happens that $x_o(1,0)=1$, then type $C_p$ does not bear more of a cost for communicating than type $C_o$. For this reason, if type $C_o$ communicates, and plays $x_o(1,0)>0$, type $C_o$ will have the same expected payoff as type $C_o$. For this reason we simplify the analysis by looking at situations where $\alpha_o=\alpha_p$ and $x_o(1,0)=1$.  
+\paragraph{Proving (iii)-(vi).}  It is enough to show (v), because (iii) is due to $L$ being a dominant strategy  for $D_o$ and because if $C_p$ is committed to play $H$ in states $(1,a)$. Clearly, if $C_o$ expects communicating types $C_k$ to play $H$, playing $H$ is the best response, hence $x_o(1,1)=1$. In state $(1,0)$, type $C_o$ believes that she faces types $C,D$ with probabilities $\frac{(1-\alpha)}{2-\alpha},\frac{(1}{2-\alpha}$, that types $C$ play $H$ and types $D$ play $L$ in state $(0,1)$. Therefore, playing $H$ is a best reponse of $C_o$ in state $(1,0)$ when
 %
-\subsubsection*{Incentives to play $H$}
-\paragraph{State $(1,1)$,} the incentive condition for $C_o$ to play $x(1,1)>0$ is:
-\begin{align*}
-	(1-\pi) &(10+40x_o(1,1))+\pi 50\\
-		&\geq (1-\pi) (20+4x_o(1,1))+\pi 24
-\end{align*}
-or
 \[
-x_o(1,1)\geq \frac{5-18\pi}{18(1-\pi)}
+(1-\alpha)50+10\geq (1-\alpha)24+20,
 \]
-which can  be satisfied for any value of $\pi$. In particular, for any value of $\pi$, it is possible to have $x_o(1,1)=1$.
+%
+which holds when 
+%
+\begin{equation}\label{cond-FC-H-10}
+	\alpha\leq \frac{8}{13}
+\end{equation}
+%
+This is intuitive: in order for a communicating player to `trust' a non-communicating player to play $H$, he must believe that he is facing a type $C$ non-communicating player with high enough probability. Because by (i), $\alpha=\frac{53}{130}$ is inferior to $\frac{8}{13}$, it is possible to have $x_k(1,0)=1$. 
 
-\paragraph{State $(1,0)$,} because the probablity than an opponent does not communicate is equal to $\frac{2-\alpha}{2}$, $x_o(1,0)\in(0,1]$ is a best response when
-\begin{align*}
-	(1-\pi)&\frac{1-\alpha}{2-\alpha} (10+40x_o(0,1))+\pi \frac{1-\alpha}{2-\alpha}(10+40 x_p(0,1))+\frac{1}{2-\alpha}10\\
-		&\geq (1-\pi)\frac{1-\alpha}{2-\alpha} (20+4x_o(0,1))+\pi \frac{1-\alpha}{2-\alpha}(20+4 x_p(0,1)) +\frac{1}{2-\alpha}20
-\end{align*}
-Note that this is the same condition for type $C_p$ and that the condition depends on the average value $(1-\pi)x_o(0,1)+\pi x_p(0,1)$. Hence, there is no loss of generality in assuming that $x_o(0,1)=x_p(0,1)$.\footnote{%
-This does not affect the incentives of types $D$ to communicate either.} Hence, for the common value $x(0,1)$, we need
+For a non-communicating type $C$, in state $(0,1)$, he faces a type $C$ who plays $H$, and playing $x_k(0,1)=1$ is optimal. In state $(0,0)$, types $C$ are indifferent between playing $H$ and $L$ when 
+%
 \[
-x(0,1)\geq\frac{5(2-\alpha)}{18(1-\alpha)}
+(1-\alpha)(10+40 x(0,0))+10=(1-\alpha)(20+4x(0,0))+20,
 \]
-which is possible if $\alpha\leq \frac{8}{13}.$
+%
+that is when $x(0,0)=\frac{1}{36}\frac{20-10\alpha}{1-\alpha}$ and when $\alpha=\frac{53}{130}$, $x(0,0)=\frac{115}{154}$, completing the proof of (iv)-(v). (vi) is trivial because we have symmetric strategies for $C_o,C_p$. 
 
-\paragraph{State $(0,1)$,} playing $x(0,1)>0$ is a best response when
+\paragraph{Proving (vii).}	The probability that two $C$ types play $(H,H)$ is equal to $\alpha^2+2\alpha(1-\alpha)+(1-\alpha)^2 x(0,0)^2$: if both communicate or if only one communicates they play $H$ with probability one, but if both do not communicate they each play $H$ with probability $x(0,0)=\frac{115}{254}$. Using $\alpha=\frac{53}{130}$, the probability that two types $C$ who meet play $(H,H)$ is $\frac{4393}{5200}$, or approximately $84.5\%$
 
-\begin{align*}
-	(1-\pi) &(10+40x_o(1,0))+\pi 50\\
-		&\geq(1-\pi) (20+4x_o(1,0))+\pi  24
-\end{align*}
-or
-\[
-x_o(1,0)\geq\frac{5-18\pi}{18(1-\pi)}.
-\]
-The right hand side is clearly less than one, is decreasing in $\pi$ and positive for $\pi\leq\frac{5}{18}$. If $\pi>\frac{5}{18}$, then necessarily $x(0,1)=1$.
 
-\paragraph{State $(0,0)$,} playing $H$ is a best response when\footnote{%
-The condition is similar to the condiiton on $x(0,1)$ in the state $(1,0$),  this would not be the case if type $C_o$ has a small cost of lying for then playing $L$ in state $(1,0$ generates an expected payoff that is lower -- for a given probability of playing $H$ by types $C$ who do not communicate.}
-\begin{align*}
-	(1-\pi)&\frac{1-\alpha}{2-\alpha} (10+40x_o(0,0))+\pi \frac{1-\alpha}{2-\alpha}(10+40 x_p(0,0))+\frac{1}{2-\alpha}10\\
-		&\geq  (1-\pi)\frac{1-\alpha}{2-\alpha} (20+4x_o(0,0))+\pi \frac{1-\alpha}{2-\alpha}(20+4 x_p(0,0)) +\frac{1}{2-\alpha}20
-\end{align*}
-The condition depends on the average probability $x(0,0):=(1-\pi)x_o(0,0)+\pi x_p(0,0)$, and requires that
-\[
-x(0,0)\geq \frac{5(2-\alpha)}{18(1-\alpha)}.
-\]
-which is possible if $\alpha\leq \frac{8}{13}$
 
-To summarize the best responses and -- if relevant -- the conditions on $\pi,\alpha$ are the following for having $x_k(a,b)$ positive:
-
-\begin{itemize}\setlength\itemsep{0em}
-	\item $x_o(1,1)\begin{cases}
-		=1 &\text{ if } \pi >\frac{5}{18}\\
-		\in\left\{1,\frac{5-18\pi}{18(1-\pi)}\right\}&\text{ if } \pi \leq \frac{5}{18}
-	\end{cases}$
-	\item Can always have $x_o(1,0)=x(0,1)=0$
-	\item For $\pi\leq \frac{5}{18}$, and $\alpha\leq \frac{8}{13}$, we can also have the mixed strategies $x_o(1,0)=\frac{5-18\pi}{18(1-\pi)}$ and $x(0,1)=\frac{5(2-\alpha)}{18(1-\alpha)}$.
-	\item $x(0,0)\begin{cases}
-		=0 &\text{ if } \alpha >\frac{8}{13}\\
-		\in\left\{1,\frac{5(2-\alpha)}{18(1-\alpha)}\right\}&\text{ if } \alpha \leq \frac{8}{13}.
-	\end{cases}$
-\end{itemize}
-
-\subsubsection*{Incentives to communicate}
-We assume that $x(a,b)>0$ for all states $(a,b)$.
-
-We are left verifying the indifference condition for types $C$ in communication ($\alpha\in(0,1)$).
+\paragraph{Proving (i)-(ii).} To finish the proof, we need to show that $\alpha=\frac{53}{130}$ is an equilibrium outcome, that is that types $C$ are indifferent between communicating and not communicating. The indifference condition for types $C$ in communication ($\alpha\in(0,1)$).
 
 \begin{align*}
 	\alpha&\left[\frac{1-\pi}{2}(10+40 x_o(1,1))+\frac{\pi}{2}50\right]+(1-\alpha)\frac{1}{2}(10+40x(0,1))+\frac{1}{2}10-3\\
@@ -846,25 +656,23 @@ We are left verifying the indifference condition for types $C$ in communication 
 \end{align*}
 The condition reduces to 
 \begin{equation}\label{IC-comm}
-	\alpha (1-\pi ) (x_o(1,1)-x_o(1,0))+(1-\alpha) (x(0,1)-x(0,0))=\frac{3}{20}.	
+	\frac{\alpha}{2} (x_o(1,1)-x_o(1,0))+(1-\alpha) (x(0,1)-x(0,0))=\frac{3}{20}.	
 \end{equation}
+%
+Substituing the values in $(iii)-(v)$ the condition is 
+
+%
+\[
+(1-\alpha)\left(1-\frac{115}{154}\right)=\frac{3}{20}
+\]
 %
 If we assume $\alpha\leq \frac{8}{13}$, we can have $x_o(1,1)=x_o(1,0)=x(0,1)=1$ and the incentive condition is 
 \[
-(1-\alpha) (1-x(0,0))=\frac{3}{20}.
+(1-\alpha) (1-x(0,0))=\frac{3}{20},
 \]
-Clearly, one must have $x(0,0)=\frac{5(2-\alpha)}{18(1-\alpha)}$. Plugging this value in the previous expression, we obtain 
-\[
-\alpha=\frac{53}{130}\approx 0.4.
-\]
-which is consistent with our assumption that $\alpha\leq \frac{8}{13}$. Then, 
-\[
-x(0,0)=\frac{115}{154}\approx 0.74.
-\]
-%
-Note that these results are independent of the value of $\pi$. 
+with solution $\alpha=\frac{53}{130}$, establishing (i).
 
-The expected payoff of type $C$ is then the payoff under communication and playing $H$, that is $u_C=\frac{1}{2}(50+10)-3=27$. For type $D$, the payoff is $24$ when facing a type $C$ that communicates, $20+4x(0,0)$ if type $C$ does not communicate, and $20$ if facing a type $D$. Therefore for $\alpha=\frac{53}{130}$ and $x(0,0)=\frac{115}{154}$, type $D$ has an expected payoff of $u_D=21.7$.
+\paragraph{Proving (viii).} The expected payoff of type $C$ is then the payoff under communication and playing $H$, that is $u_C=\frac{1}{2}(50+10)-3=27$. For type $D$, the payoff is $24$ when facing a type $C$ that communicates, $20+4x(0,0)$ if type $C$ does not communicate, and $20$ if facing a type $D$. Therefore for $\alpha=\frac{53}{130}$ and $x(0,0)=\frac{115}{154}$, type $D$ has an expected payoff of $u_D=21.7$.
 %
 
 
