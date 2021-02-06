@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex HGL-experiment"] 1612626550 "HGL-experiment.aux" "HGL-experiment.bbl" "HGL-experiment" 1612626552
+["bibtex HGL-experiment"] 1612626550 "HGL-experiment.aux" "HGL-experiment.bbl" "HGL-experiment" 1612626719
   "/usr/local/texlive/2020/texmf-dist/bibtex/bst/harvard/agsm.bst" 1136766823 25549 e3d0f1ab4ae55e777f7352db30e2c6f7 ""
-  "HGL-experiment.aux" 1612626552 5747 98cfcc06e6348713078bd561094e9444 "pdflatex"
+  "HGL-experiment.aux" 1612626718 5747 98cfcc06e6348713078bd561094e9444 "pdflatex"
   "collusion.bib" 1612519831 12616 10d2a594337026ce35571db5a17384be ""
   (generated)
-  "HGL-experiment.bbl"
   "HGL-experiment.blg"
-["pdflatex"] 1612626550 "/Users/patricklegros/Dropbox/Git_Projects/experiment-1/HGL-experiment.tex" "/Users/patricklegros/Dropbox/Git_Projects/experiment-1/HGL-experiment.pdf" "HGL-experiment" 1612626552
-  "/Users/patricklegros/Dropbox/Git_Projects/experiment-1/HGL-experiment.aux" 1612626552 5747 98cfcc06e6348713078bd561094e9444 ""
-  "/Users/patricklegros/Dropbox/Git_Projects/experiment-1/HGL-experiment.tex" 1612626548 82429 4577404911bb7e19a3d7be1fb07e06ca ""
+  "HGL-experiment.bbl"
+["pdflatex"] 1612626717 "/Users/patricklegros/Dropbox/Git_Projects/experiment-1/HGL-experiment.tex" "/Users/patricklegros/Dropbox/Git_Projects/experiment-1/HGL-experiment.pdf" "HGL-experiment" 1612626719
+  "/Users/patricklegros/Dropbox/Git_Projects/experiment-1/HGL-experiment.aux" 1612626718 5747 98cfcc06e6348713078bd561094e9444 ""
+  "/Users/patricklegros/Dropbox/Git_Projects/experiment-1/HGL-experiment.tex" 1612626716 82443 a29d84717800581dd9bd0da4a0ce394d ""
   "/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
@@ -170,9 +170,9 @@
   "/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1586288239 4811913 0be9a7e86c70a26e5e3042966bcd7097 ""
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1598022670 2432462 936a9c10fe2222aba905c9c90de6227d ""
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
-  "HGL-experiment.aux" 1612626552 5747 98cfcc06e6348713078bd561094e9444 "pdflatex"
+  "HGL-experiment.aux" 1612626718 5747 98cfcc06e6348713078bd561094e9444 "pdflatex"
   "HGL-experiment.bbl" 1612626550 1797 af9cbdad668e5f24f94efba1d0819cd0 "bibtex HGL-experiment"
-  "HGL-experiment.tex" 1612626548 82429 4577404911bb7e19a3d7be1fb07e06ca ""
+  "HGL-experiment.tex" 1612626716 82443 a29d84717800581dd9bd0da4a0ce394d ""
   "fig1-CT-instructions.png" 1612519831 51783 3699458e772f952b76d3d7653d5e52a4 ""
   "fig1-FC-instructions.png" 1612519831 54841 08c58829f485b857becc63b390d620e9 ""
   "fig1-NC-instructions.png" 1612519831 47606 7a237b7c0278cf1f4acdeb7fa4af370f ""
@@ -183,6 +183,6 @@
   (generated)
   "HGL-experiment.log"
   "HGL-experiment.pdf"
-  "/Users/patricklegros/Dropbox/Git_Projects/experiment-1/HGL-experiment.pdf"
   "/Users/patricklegros/Dropbox/Git_Projects/experiment-1/HGL-experiment.log"
   "HGL-experiment.aux"
+  "/Users/patricklegros/Dropbox/Git_Projects/experiment-1/HGL-experiment.pdf"
