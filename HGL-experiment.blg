@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: HGL-experiment.aux
+The style file: agsm.bst
+Database file #1: collusion.bib
+You've used 7 entries,
+            2909 wiz_defined-function locations,
+            687 strings with 5632 characters,
+and the built_in function-call counts, 29752 in all, are:
+= -- 4860
+> -- 350
+< -- 0
++ -- 2286
+- -- 105
+* -- 2601
+:= -- 5945
+add.period$ -- 7
+call.type$ -- 7
+change.case$ -- 98
+chr.to.int$ -- 7
+cite$ -- 7
+duplicate$ -- 112
+empty$ -- 259
+format.name$ -- 133
+if$ -- 5338
+int.to.chr$ -- 5
+int.to.str$ -- 0
+missing$ -- 7
+newline$ -- 24
+num.names$ -- 72
+pop$ -- 19
+preamble$ -- 1
+purify$ -- 105
+quote$ -- 0
+skip$ -- 94
+stack$ -- 0
+substring$ -- 6912
+swap$ -- 21
+text.length$ -- 98
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 28
+warning$ -- 0
+while$ -- 161
+width$ -- 0
+write$ -- 90

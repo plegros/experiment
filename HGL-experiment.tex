@@ -381,9 +381,7 @@ Hence, we observe two countervailing effects: Communication is much more credibl
 \appendix
 \section{Appendix}
 \subsection{Proofs of theoretical results of section \ref{sec:standard-setting} - Standard model}
-We prove Propositions \ref{prop:NC} and \ref{prop:compare-payoffs} by characterizing the set of equilibrium outcomes under the three treatments when agents do not bear a cost of breaking promises (hence when $\pi=0$.)
-
-\subsubsection*{No Communication (NC)}
+\subsection*{Proof of Proposition \ref{prop:NC}}
 Since H is strictly dominated for $D$-types, they play $L$. Let $x$ be the probability that a $C$-type plays $H$. In equilibrium, $x>0$ requires that
 \[
 	\frac{1}{2}(10+(50-10)x)+\frac{1}{2}(10)\geq \frac{1}{2}(20+4 x)+\frac{1}{2}(20)
@@ -391,18 +389,18 @@ Since H is strictly dominated for $D$-types, they play $L$. Let $x$ be the proba
 which boils down to\[
 x\geq \frac{5}{9}
 	\]
-Hence, in equilibrium either $x=0$, or $x=1$ or $x=\frac{5}{9}$. The calculation of the expected payoffs is straightforward. This proves Proposition \ref{prop:NC}.
+Hence, in equilibrium either $x=0$, or $x=1$ or $x=\frac{5}{9}$. The calculation of the expected payoffs is straightforward. 
 
+
+\subsection*{Proof of Proposition \ref{prop:compare-payoffs}}
+We consider first the equilibria of regime CT, to prove (i)-(ii) and then the equilibria of regime FC to prove (iii).
+%
 \subsubsection*{Communication without Cost (CT)}
-It is clear that there is no equilibrium such that only $C$-types communicate and play $H$ with a positive probability when encountering another communicating player. 
+There are always equilibrium outcomes where all types do not communicate or all types communicate. The continuation strategies in such a case are similar to those in the NC regime.
 
-If $C$ communicates with probability one, $D$ will also communicate. Indeed, if $D$ does not communicate, in state $(1,0)$ types $C$ plays $L$ with  probability one and $D$ has a payoff of $20$ by not communicating. By communicating, $D$ has a payoff of $\frac{1}{2}(20+4x(1,1))+\frac{1}{2}(20)$ which is larger than $20$ if $x(1,1)>0$. Hence if type $C$ communicates with probability one, either they do not play $H$ or they play $H$ and type $D$ also communicates. This situation is observationally equivalent to the previous regime of no communication.
+Consider now cases where some types communicate while others do not. We first note that if $C$ communicates with probability one, $D$ will also communicate. Indeed, if $D$ does not communicate, in state $(1,0)$ types $C$ plays $L$ with  probability one. Hence, $D$ has a payoff of $20$ by not communicating. But by communicating, $D$ has a payoff of $\frac{1}{2}(20+4x(1,1))+\frac{1}{2}(20)$ which is larger than $20$ if $x(1,1)>0$. Hence if type $C$ communicates with probability one, either they do not play $H$ or they play $H$ and type $D$ also communicates. Hence, all types communicated, and as already noted, the outcome is observationally equivalent to the previous regime of no communication.
 
 Another possibility is when types $C$ and $D$ play a mixed strategy in communication. Let $\alpha$ be the strategy of $C$ and $\beta$ the strategy of $D$ in communication. If the opponent has communicated, an agent believes that she faces a type $C$ with probability $\frac{\alpha}{\alpha+\beta}$. If the opponent has not communicated, an agent believes that she is facing a type $C$ with probability $\frac{1-\alpha}{2-\alpha-\beta}$.
-
-\textcolor{red}{[NOTE: Can we argue as follows instead of providing Continuation Strategy and Incentive to Communicate parts for cheap talk case? In this case the proof will be shorter. If we want to analyze strategies and incentive to communicate, I think we should also consider the cases when $x(a,b)=0$ at least for some cases.]} \textcolor{blue}{As type $D$ always play $H$ and best response to $H$ is to play $H$ for type $C$, type $C$ plays $L$ more likely when she believes that the opponent is type $C$ with higher probability. If type $C$ communicates more often than type $D$, i.e., $\alpha>\beta$, then $\frac{\alpha}{\alpha+\beta}>1/2$. In this case, communication is informative and players believe that the opponent is type $C$ with higher probability than the prior. This means type $C$ will play $L$ with (weakly) higher probability. As type $D$ benefits when the opponent plays $L$, then type $D$ will have an incentive to communicate, i.e., increase $\beta$ up to $\beta=1$. Similar logic applies when $\frac{\alpha}{\alpha+\beta}<1/2$. In that case, $C$ plays $L$ more often when the opponent does not communicate and $D$ type has incentive incentive not to communicate. So in the equilibrium both players will communicate with the same probability $\alpha=\beta$ and communication will not be informative.}
-
-We will be looking at equilibria consistent with types $C$ playing $H$ with a positive probability, and both types communicating, that is $\alpha\beta>0$. 
 
 \paragraph{Continuation Strategies}
 
@@ -432,7 +430,6 @@ and a necessary condition is that
 \[
 1-\alpha\geq \frac{5}{13}(1-\beta)
 \]
-
 %
 \paragraph{State $(0,0)$.} The belief structure is the same as that of a communicating type $C$ in state $(1,0)$, and therefore $x(0,0)>0$ when
 \begin{equation}\label{CWC-BR00}
@@ -440,13 +437,114 @@ and a necessary condition is that
 \end{equation}
 with the same necessary condition as in state $(1,0)$.
 
-It is possible to have all $x(a,b)>0$ when the bounds in \eqref{CWC-BR10} and \eqref{CWC-BR00} are not greater than one, that is when
+Note that is possible for $C$ to play $H$ in all states when the bounds in \eqref{CWC-BR10} and \eqref{CWC-BR00} are not greater than one, that is when
 \begin{equation}\label{xij>0-CWC}
 	\frac{5}{13}\beta\leq \alpha \leq \frac{5}{13}\beta+\frac{8}{13}.
 \end{equation}
 %
-\paragraph{Incentives to Communicate}
-It is possible that $x(a,b)>0$ for each state $(a,b)$. The necessary condition is \eqref{xij>0-CWC}. In this case, types $C$ weakly prefer to communicate and when
+\paragraph{Incentives to Communicate and Equilibrium Payoffs}
+There are different cases to consider.
+
+\paragraph{Case 1: $\alpha<\frac{5}{13}\beta$.} Then, $x(a,b)=0$ for all states and the equilibrium payoff is $20$ for each type.
+
+\paragraph{Case 2: $\alpha > \frac{5}{13}\beta+\frac{8}{13}$.} In this case, $x(1,0)=x(0,1)=x(0,0)$, but $x(1,1)$ can be positive. If $x(1,1)=0$, the equilibrium payoff is again $20$ for all types. If $x(1,1)$ is positive, types $C$ weakly prefer to communicate when
+\begin{equation}\label{IC-comm-CWC}
+	\begin{split}
+	\frac{\alpha}{2}& (10+40x(1,1))+\frac{\beta}{2}10+\frac{1-\alpha}{2}20+\frac{1-\beta}{2}20\\ 
+	&\geq 20
+	\end{split}
+\end{equation}
+that is when
+%
+\begin{equation}
+	x(1,1)\geq \frac{\alpha+\beta}{4},
+\end{equation}
+%
+This condition for type $D$ to communicate is 
+%
+\begin{align*}
+	\frac{\alpha}{2}& (20+4x(1,1))+\frac{\beta}{2}20+\frac{1-\alpha}{2}20+\frac{1-\beta}{2}20\\ 
+	&\geq 20,
+\end{align*}
+%
+or 
+%
+\[
+4\alpha x(1,1)\geq 0.
+\]
+%
+Therefore, whenever type $C$ communicates, type $D$ communicate with probability one $\beta=1$.  But then the expected equilibrium payoff of type $1$ is bounded above (using $x(1,1)=1$) by
+%
+\[
+	25\alpha+5+(1-\alpha)10\leq 30.
+\]
+%
+\paragraph{Case 3: condition \eqref{xij>0-CWC} holds.} In this case it is possible to have $x(a,b)$ positive for all states $(a,b)$. 
+\begin{enumerate}[(a)]
+	\item If $x(1,1)>0$ and $x(a,b)=0$ for $(a,b)\neq (1,1)$, we are back to case 2 above, and the equilibrium payoff of type $C$ is bounded above by $30$.
+	\item $x(1,1)>0$, and $x(a,b)>0$ for all $(a,b)\neq (1,1)$, type $C$ is better off communicating when
+	\begin{equation*}
+		\begin{split}
+		\frac{\alpha}{2}& (10+40x(1,1))+\frac{1-\alpha}{2}(10+40x(0,1))+\frac{1}{2}10\\ 
+		&\geq \frac{\alpha}{2} (10+40x(1,0))+\frac{1-\alpha}{2}(10+40x(0,0))+\frac{1}{2}10
+		\end{split}
+	\end{equation*} 
+	which reduces to
+	\begin{equation*}
+		\alpha (x(1,1)-x(1,0))+(1-\alpha)(x(0,1)-x(0,0))\geq 0.
+	\end{equation*}
+	%
+	This is the same condition for $D$-types to be better off by communicating. Each type of players have the same incentives to communicate and communication is not informative. Formally, the equilibrium payoff of type $C$ is $10+20(\alpha x(1,1)+(1-\alpha)x(0,1))$, which is clearly less than $30$/
+	\item If $x(1,1)>0$, $x(1,0)x(0,1)>0$ and $x(0,0)>0$, we are back to the previous case because when type $C$ communicates, here payoff is independent of $x(0,0)$.
+	\item If $x(1,1)>0$, $x(1,0)=x(0,1)=0$, we are back to the first case.
+	\item If $x(1,1)=0$, by communicating type $C$ gets more than $20$ only if $x(1,0)x(0,1)$ is positive. Communicating is optimal when $x(0,0)>0$ only if
+	%
+	\begin{align*}
+		\frac{\alpha}{2} (20)&+\frac{\beta}{2}(20)+\frac{1-\alpha}{2}(10+40x(0,1))+\frac{1-\beta}{2}10\\ 
+		&\geq \frac{\alpha}{2}(10+40x(1,0)) +\frac{\beta}{2}(10)+\frac{1-\alpha}{2}(10+40x(0,0))+\frac{1-\beta}{2}10
+	\end{align*}
+	or,
+	%
+	%
+\begin{equation}\label{icc}
+\alpha+\beta \geq 4 (\alpha x(1,0)+(1-\alpha)(x(0,0)-x(0,1))
+\end{equation}
+%
+Type $D$ prefers to communicate when
+%
+\begin{align*}
+	\frac{\alpha}{2}20&+\frac{\beta}{2}20+\frac{1-\alpha}{2}(20+4x(0,1))+\frac{1-\beta}{2}20\\ 
+	&\geq \frac{\alpha}{2}(20+4x(1,0))+\frac{\beta}{2}20+\frac{1-\alpha}{2}(20+4x(0,0))+\frac{1-\beta}{2}20
+\end{align*}
+%
+that is when%
+\begin{equation}\label{icd}
+	\alpha x(1,0)+(1-\alpha)(x(0,0)-x(0,1))\leq 0.
+\end{equation}
+%
+Clearly, \eqref{icd} implies \eqref{icc}. 
+\begin{itemize}
+	\item If $\alpha=0$, the negation of \eqref{icc} requires that $\beta\leq 4(x(0,0)-x(1,0))$, hence from \eqref{icd} that $\beta=0$. But then the maximum equilibrium payoff is as in regime NC.
+	\item  Suppose that $\alpha$ is positive. If $\beta=0$, the equilibrium payoff of $C$ is equal to $10+5\alpha+20(1-\alpha)x(0,1)$, which is bounded above by $30$ (when $\alpha=0$ and $x(0,1)=1$.) If $\beta>0$, then type $C$ equilibrium payoff is $5(1+\alpha+\beta)+20(1-\alpha)x(0,1)$, which is maximum at $x(0,1)=1$, and type $C$ payoff is then $25-15\alpha+5\beta$, which is bounded above by $30$.
+\end{itemize}
+
+\end{enumerate}
+
+This exhausts all the possible equilibrium configurations, and therefore proves (ii) of Proposition \ref{prop:CT}
+
+	%
+	%
+
+and 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%   
+%%%%%%%%    OLD stuff       %%%%%%%% 
+%    
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Under \eqref{xij>0-CWC}, types $C$ weakly prefer to communicate when
 \begin{equation}\label{IC-comm-CWC}
 	\begin{split}
 	\frac{\alpha}{2}& (10+40x(1,1))+\frac{1-\alpha}{2}(10+40x(0,1))+\frac{1}{2}10\\ 
@@ -458,37 +556,15 @@ Note that the condition reduces to
 	\alpha (x(1,1)-x(1,0))+(1-\alpha)(x(0,1)-x(0,0))\geq 0.
 \end{equation}
 %
-The same condition is also true for $D$-types. If this condition binds, it also implies that type $D$ is indifferent between communicating and not communicating. If there is a strict inequality, types $D$ also communicate with probability one. In both cases, both type of players have the same incentives to communicate and communication is not informative. We can conclude that the expected payoff is not greater than $30$, proving Proposition \ref{prop:CT} (ii).
-
-
-% (fold)
+The same condition is also true for $D$-types. If this condition binds, it also implies that type $D$ is indifferent between communicating and not communicating. If there is a strict inequality, types $D$ also communicate with probability one. In both cases, both type of players have the same incentives to communicate and communication is not informative. We can conclude that the expected payoff is not greater than $30$, proving Proposition \ref{prop:compare-payoffs} (ii).
 
 \subsubsection*{Costly Communication (FC)}
-When a fee of $3$ has to be paid in order to communicate, types $D$ cannot benefit from communicating. Indeed, as type $D$ always plays $H$, the maximum payoff type $D$ player can get from communication is equal to $\frac{1}{2}24 +\frac{1}{2}20=22$. This happens when type $C$ always plays $L$ after communication. So, the maximum gain of type $D$ is equal to $22-20=2$ which is less than the exogenous cost of communication.
+When a fee of $3$ has to be paid in order to communicate, types $D$ cannot benefit from communicating. Indeed, as type $D$ always plays $L$, the maximum payoff type $D$ player can get from communication is when type $C$ plays $H$ after communicating, and is equal to $\frac{1}{2}24 +\frac{1}{2}20=22$. So, the maximum gain of type $D$ is equal to $22-20=2$ which is less than the exogenous cost of communication.
 
-\textcolor{red}{NOTE: If we use the proof I suggested above for CT, we can use change the proof for FC as follows.} \textcolor{blue}{Let's assume that $C$ type communicates with a probability $\alpha$. If $\alpha=0$, then none of the types communicate and we have the same continuation game and expected payoffs as in the no-communication case. Now assume that $\alpha\in (0,1]$. If the opponent has communicated, then a player believes that she faces a type $C$ with probability $1$. If the opponent has not communicated then a player believes that she is facing a type $C$ with a probability $\frac{1-\alpha}{2-\alpha}$.}
+Therefore, if the opponent communicates, the player believes that she is facing a type $C$. The differences with the regime CT are that we can ignore the incentive compatibility condition of type $D$ because they have a dominant strategy not to communicate, and the incentive condition for type $C$ is more difficult to satisfy because there is the exogenous cost of $3$ that the player bears if communicating.  
 
-\textcolor{blue}{If the state is $(1,1)$, then $C$ plays $L$ if $10+40x(1,1) \geq 20+4x(1,1)$ or $x(1,1)\geq \frac{5}{18}$. Similarly, if the state is $(0,1)$, then $C$ plays $L$ if $x(1,0)\geq \frac{5}{18}$.}
 
-\textcolor{blue}{If the state is $(1,0)$, then $C$ plays $L$ if $$(1-\alpha)(10+40x(0,1))+10 \geq (1-\alpha)(20+4x(0,1))+20,$$ or $x(0,1)\geq \frac{5}{18}\frac{2-\alpha}{1-\alpha}$. Similarly, if the state is $(0,0)$, then $C$ plays $L$ if $x(0,0)\geq \frac{5}{18}\frac{2-\alpha}{1-\alpha}$. This condition can be fulfilled if $\alpha\leq \frac{8}{13}$.}
-
-\textcolor{blue}{If $\alpha > \frac{8}{13}$, then $x(1,0)=x(0,0)=x(0,1)=0$. In the state $(1,1)$, $C$ type gets highest payoff $50$ if $x(1,1)=1$. $C$ type prefers to communicate in this case. Communication fully reveals types and leads to an expected payoff $35-3=32$. If $C$ type does not communicate then she gets only $20$. In this case, $\alpha = 1$ and $x(1,1)=1$ lead to highest payoff $32$.}
-
-\textcolor{blue}{If $\alpha < \frac{8}{13}$, then $x(a,b)$ can be positive for all cases. If $x(a,b)\geq 0$, then type $C$ is indifferent (or strictly prefer) to play $L$ or $H$ if the other side does not communicate. If we consider that type $C$ plays $L$, then if she faces an opponent of type $D$ then her expected payoff will be $10$, while her maximum payoff can be $50$ when she faces with a type $C$. Expected payoff of the player will be $30$, excluding the cost of communication, and is lower than the full separation payoff $32$.}
-
-Therefore $\beta=0$. The continuation strategies of type $C$ are the same as in the previous case. However the incentive of type $C$ to communicate is different.
-
-\begin{equation}\label{ICcom-F50}
-	20 (\alpha(x(1,1)-x(1,0)+(1-\alpha)(x(0,1)-x(0,0))))\geq 3.	
-\end{equation}
-
-There are many solutions satisfying this condition as well as \eqref{CWC-BR11}-\eqref{CWC-BR00}. In particular, when $\alpha=1, \beta=0$ and $x(1,1)=1,x(1,0)=0$. Communication is fully revealing and types $C$ have an expected payoff of $\frac{1}{2}(50)+\frac{1}{2}(20)-3=32$, proving (iii) of Proposition \ref{prop:compare-payoffs}.
-
-If $x(a,b)=0$ for $(a,b)\neq (1,1)$, we need
-\[
-20 \alpha x(1,1)\geq 3,
-\]
-hence a minimum value of $\alpha$ of $15\%$ when $x(1,1)=1$. If $x(1,1)=\frac{5}{18}$, the condition is that $\alpha \geq 54\%$.
+Equilibrium payoffs are bounded above by $32$, when $\alpha=1$ and types $C$ get their maximum full information payoffs of $50$ against type $C$ and $20$ against types $D$. This proves (iii) of Proposition \ref{prop:compare-payoffs}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   
